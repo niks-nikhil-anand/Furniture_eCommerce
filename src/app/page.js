@@ -1,5 +1,6 @@
 import Hero from '@/components/Hero'
 import { ExampleNavbarTwo } from '@/components/Navbar'
+import { Section } from '@/components/Section'
 import React from 'react'
 
 const Home = () => {
@@ -7,6 +8,7 @@ const Home = () => {
     <>
     <ExampleNavbarTwo/>
     <Hero/>
+    <Section/>
     </>
   )
 }

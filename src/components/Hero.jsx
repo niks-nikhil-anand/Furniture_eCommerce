@@ -19,7 +19,7 @@ const HeroSection = () => {
   return (
     <div className="relative h-[70vh] overflow-hidden">
       <div className="absolute inset-0 bg-gray-900 opacity-75"></div>
-      <div className="z-10 text-white text-center absolute top-1/2 left-1/4 transform -translate-x-1/2 -translate-y-1/2">
+      <div className="z-10 text-white text-center absolute top-1/2 left-1/2 md:left-1/4 transform -translate-x-1/2 -translate-y-1/2">
         <h1 className="text-2xl md:text-6xl font-bold">Your Website Name</h1>
         <p className="text-lg md:text-xl mt-4">Your tagline goes here</p>
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-6">Get Started</button>
