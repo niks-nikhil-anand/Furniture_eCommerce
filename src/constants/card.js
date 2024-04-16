@@ -9,14 +9,14 @@ export const products = [
     {
       "id": 2,
       "image": "https://images.unsplash.com/photo-1560184897-67f4a3f9a7fa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fGZ1cm5pdHVyZXxlbnwwfDB8MHx8fDA%3D",
-      "title": "Longitudinal Dialysis Sports Amalgamator",
+      "title": "Longitudinal Dialysis Sports ",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, debitis?",
       "tags": ["Medical", "Sports"]
     },
     {
       "id": 3,
       "image": "https://images.unsplash.com/photo-1618543005334-b0904ecd4441?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njd8fGZ1cm5pdHVyZXxlbnwwfDB8MHx8fDA%3D",
-      "title": "Artificial Intelligence Coffee Maker",
+      "title": "Artificial Intelligence ",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, debitis?",
       "tags": [ "Coffee", "Technology"]
     },
@@ -37,7 +37,7 @@ export const products = [
     {
       "id": 6,
       "image": "https://plus.unsplash.com/premium_photo-1684338795288-097525d127f0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGZ1cm5pdHVyZXxlbnwwfDB8MHx8fDA%3D",
-      "title": "Longitudinal Watermelon Robot",
+      "title": "Longitudinal  Robot",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, debitis?",
       "tags": ["Robots", "Technology"]
     },
@@ -51,14 +51,14 @@ export const products = [
     {
       "id": 8,
       "image": "https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzV8fGZ1cm5pdHVyZXxlbnwwfDB8MHx8fDA%3D",
-      "title": "Chandelier Countdown Repeater",
+      "title": "Chandelier Countdown ",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, debitis?",
       "tags": ["Lighting", "Home"]
     },
     {
       "id": 9,
       "image": "https://images.unsplash.com/photo-1595329088732-d3b286981166?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDN8fGZ1cm5pdHVyZXxlbnwwfDB8MHx8fDA%3D",
-      "title": "Longitudinal Botanical Scooter",
+      "title": "Longitudinal Botanical ",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, debitis?",
       "tags": ["Botanical", "Scooter"]
     },
