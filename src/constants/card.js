@@ -9,7 +9,7 @@ export const products = [
     {
       "id": 2,
       "image": "https://images.unsplash.com/photo-1560184897-67f4a3f9a7fa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fGZ1cm5pdHVyZXxlbnwwfDB8MHx8fDA%3D",
-      "title": "Longitudinal Dialysis Sports ",
+      "title": "Longitudinal  Sports ",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, debitis?",
       "tags": ["Medical", "Sports"]
     },
