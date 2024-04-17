@@ -15,7 +15,7 @@ const menuItems = [
   },
   {
     name: 'Contact',
-    href: '#',
+    href: '/contact',
   },
 ];
 
