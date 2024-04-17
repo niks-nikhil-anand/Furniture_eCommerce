@@ -10,7 +10,7 @@ import React from 'react'
 const Home = () => {
   return (
     <>
-    <ExampleNavbarTwo/>
+    
     <Hero/>
     <Section/>
     <CategoriesOfFurniture/>

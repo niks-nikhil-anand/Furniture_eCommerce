@@ -4,11 +4,11 @@ import { products } from '@/constants/card';
 
 export function Card() {
   return (
-    <div className="container mx-auto px-4 mt-[4rem] mb-[3rem] lg:px-[5rem] lg:mb-[6rem]">
+    <div className="container mx-auto px-4 mt-[4rem] mb-[3rem] lg:px-[5rem] lg:mb-[6rem] ">
       <h1 className="text-3xl font-bold mt-8 mb-4">Our Latest Product</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
         {products.map((product) => (
-          <div key={product.id} className="w-[300px] rounded-md border">
+          <div key={product.id} className="w-[300px] rounded-md border bg-[#FFEBC4]">
             <img
               src={product.image}
               alt={product.title}

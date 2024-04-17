@@ -23,7 +23,7 @@ const CategoryList = () => (
 const CategoriesOfFurniture = () => (
   <div className="container mx-auto px-7 mt-[2rem] lg:ml-[4rem]">
     <h2 className="text-xl lg:text-3xl font-bold mt-8 mb-4">Categories of Flowers</h2>
-    <div className="border-t border-b py-4 overflow-x-auto">
+    <div className="border-t border-b py-4 overflow-x-auto border-[#82714F]">
       <CategoryList />
     </div>
   </div>
