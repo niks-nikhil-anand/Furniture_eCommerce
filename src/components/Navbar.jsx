@@ -1,29 +1,30 @@
-'use client'
-
-import React from 'react'
-import { Menu, X } from 'lucide-react'
+"use client"
+import React, { useState } from 'react';
+import { Menu, X } from 'lucide-react';
+import { FaCartArrowDown } from 'react-icons/fa6';
+import Link from 'next/link';
 
 const menuItems = [
   {
     name: 'Home',
-    href: '#',
+    href: '/',
   },
   {
     name: 'About',
-    href: '#',
+    href: '/about',
   },
   {
     name: 'Contact',
     href: '#',
   },
-]
+];
 
 export function ExampleNavbarTwo() {
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)
-  }
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <div className="relative w-full bg-[#FFEBC4]">
@@ -45,7 +46,7 @@ export function ExampleNavbarTwo() {
           </span>
           <span className="font-bold">2Solution</span>
         </div>
-        <div className="hidden grow items-start lg:flex">
+        <div className="hidden lg:flex items-start">
           <ul className="ml-12 inline-flex space-x-8">
             {menuItems.map((item) => (
               <li key={item.name}>
@@ -60,19 +61,25 @@ export function ExampleNavbarTwo() {
           </ul>
         </div>
         <div className="hidden lg:block">
-          <button
-            type="button"
-            className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-          >
-            Button text
-          </button>
+        <Link href="/cart">
+  <button
+    type="button"
+    className="rounded-md bg-black px-6 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+  >
+    <div className='flex items-center space-x-1 gap-5'>
+      <FaCartArrowDown />
+      <span>Inquiry List</span>
+    </div>
+  </button>
+</Link>
+
         </div>
         <div className="lg:hidden">
           <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer" />
         </div>
         {isMenuOpen && (
           <div className="absolute inset-x-0 top-0 z-50 origin-top-right transform p-2 transition lg:hidden">
-            <div className="divide-y-2 divide-gray-50 rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+            <div className="divide-y-2 divide-gray-50 rounded-lg bg-[#FFEBC4] shadow-lg ring-1 ring-black ring-opacity-5">
               <div className="px-5 pb-6 pt-5">
                 <div className="flex items-center justify-between">
                   <div className="inline-flex items-center space-x-2">
@@ -90,7 +97,7 @@ export function ExampleNavbarTwo() {
                         />
                       </svg>
                     </span>
-                    <span className="font-bold">DevUI</span>
+                    <span className="font-bold">2Solution</span>
                   </div>
                   <div className="-mr-2">
                     <button
@@ -118,17 +125,23 @@ export function ExampleNavbarTwo() {
                     ))}
                   </nav>
                 </div>
-                <button
-                  type="button"
-                  className="mt-4 w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                >
-                  Button text
-                </button>
+                <Link href="/cart">
+                  <button
+                    type="button"
+                    className="mt-4 w-full rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                  >
+                    <div className='flex px-[3rem] justify-center gap-[1rem]'>
+                    <FaCartArrowDown className='h-[20px]' />
+                   <span>Inquiry List</span>
+                    </div>
+                   
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
         )}
       </div>
     </div>
-  )
+  );
 }

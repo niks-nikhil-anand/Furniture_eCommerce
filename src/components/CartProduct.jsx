@@ -1,5 +1,6 @@
 import React from 'react'
 import { Trash, Heart } from 'lucide-react'
+import InquiryForm from './InquiryForm'
 
 const products = [
   {
@@ -87,20 +88,10 @@ export function Cart() {
           <span className="font-semibold"> ₹48,967</span>
         </p>
       </div>
-      <div className="flex justify-end space-x-4">
-        <button
-          type="button"
-          className="rounded-md border border-[#82714F] px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-        >
-          Back to shop
-        </button>
-        <button
-          type="button"
-          className="rounded-md border border-black px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-        >
-          Checkout
-        </button>
+      <div>
+        <InquiryForm/>
       </div>
+     
     </div>
   )
 }

@@ -51,10 +51,10 @@ export function Footer() {
               fill="black"
             />
           </svg>
-          <span className="ml-4 text-lg font-bold">DevUI</span>
+          <span className="ml-4 text-lg font-bold">2Solution</span>
         </div>
         <div className="mt-4 md:mt-0">
-          <p className="text-sm font-medium text-gray-500">© 2023 DevUI. All rights reserved.</p>
+          <p className="text-sm font-medium text-gray-500">© 2023 2Solution. All rights reserved.</p>
         </div>
       </div>
     </footer>
