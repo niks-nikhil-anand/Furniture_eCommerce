@@ -1,12 +1,21 @@
 "use client"
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Trash, Heart } from 'lucide-react';
 import InquiryForm from './InquiryForm';
 import { CartContext } from '../context/CartContext.js'; 
 
-
 export function Cart() {
-  const { cart, removeFromCart , clearCart} = useContext(CartContext);
+  const { cart, removeFromCart, clearCart } = useContext(CartContext);
+  const [isHydrated, setIsHydrated] = useState(false);
+
+  // Set isHydrated to true after component mounts
+  useEffect(() => {
+    setIsHydrated(true);
+  }, []);
+
+  if (!isHydrated) {
+    return null; // Render nothing until the component is hydrated
+  }
 
   return (
     <div className="mx-auto flex max-w-3xl flex-col space-y-4 p-6 px-2 sm:p-10 sm:px-2">
@@ -48,11 +57,10 @@ export function Cart() {
         ))}
       </ul>
       <div className="space-y-1 text-right">
-  <button onClick={clearCart} className="text-blue-500 underline cursor-pointer">
-    Clear Inquiry List
-  </button>
-</div>
-
+        <button onClick={clearCart} className="text-blue-500 underline cursor-pointer">
+          Clear Inquiry List
+        </button>
+      </div>
       <div>
         <InquiryForm />
       </div>
@@ -60,9 +68,5 @@ export function Cart() {
   );
 }
 
-// Function to calculate total amount
-function calculateTotal(cart) {
-  return cart.reduce((total, product) => total + product.price, 0);
-}
-
 export default Cart;
+

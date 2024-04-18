@@ -4,21 +4,19 @@ import React, { createContext, useState, useEffect } from 'react';
 const CartContext = createContext();
 
 const CartProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
-
-
-  useEffect(() => {
-    const savedCart = localStorage.getItem('cart');
-    if (savedCart) {
-      setCart(JSON.parse(savedCart));
+  const [cart, setCart] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const savedCart = localStorage.getItem('cart');
+      return savedCart ? JSON.parse(savedCart) : [];
+    } else {
+      return [];
     }
-  }, []);
-  
-  
+  });
 
-  
   useEffect(() => {
-    localStorage.setItem('cart', JSON.stringify(cart));
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('cart', JSON.stringify(cart));
+    }
   }, [cart]);
 
   const addToCart = (product) => {
@@ -31,9 +29,7 @@ const CartProvider = ({ children }) => {
   };
 
   const clearCart = () => {
-    if (cart.length > 0) {
-      setCart([]);
-    }
+    setCart([]);
   };
 
   return (
