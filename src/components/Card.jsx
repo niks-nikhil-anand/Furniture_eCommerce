@@ -4,7 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 import { CartContext } from '../context/CartContext'; 
 import { products } from '@/constants/card';
 
-export function Card() {
+export function Card({ initialCart }) {
   const { cart, addToCart } = useContext(CartContext);
 
   const isProductInCart = (productId) => {
@@ -13,9 +13,7 @@ export function Card() {
 
   const handleAddToCart = (product) => {
     addToCart(product);
-    if (!isProductInCart(product.id)) {
-      handleAddToInquiry();
-    }
+    handleAddToInquiry();
   };
 
   const handleAddToInquiry = () => {
@@ -51,6 +49,7 @@ export function Card() {
                 type="button"
                 onClick={() => handleAddToCart(product)}
                 className="mt-4 w-full rounded-sm bg-black px-2 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                disabled={isProductInCart(product.id)}
               >
                 {isProductInCart(product.id) ? 'Added to Inquiry' : 'Add to Inquiry'}
               </button>
@@ -61,3 +60,16 @@ export function Card() {
     </div>
   );
 }
+
+export async function getServerSideProps() {
+  // Fetch initial cart data here
+  const initialCart = []; // Replace this with your actual data fetching logic
+
+  return {
+    props: {
+      initialCart,
+    },
+  };
+}
+
+export default Card;
