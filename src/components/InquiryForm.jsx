@@ -43,7 +43,7 @@ const InquiryForm = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="mt-1 block w-full h-[3rem] border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            className="mt-1 block w-full h-[3rem] border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-4"
           />
         </div>
         <div>
@@ -56,7 +56,7 @@ const InquiryForm = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="mt-1 block w-full  h-[3rem] border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+            className="mt-1 block w-full  h-[3rem] border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-4"
           />
         </div>
         <div className="flex flex-col sm:flex-row sm:space-x-4">
@@ -70,7 +70,7 @@ const InquiryForm = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="mt-1 block w-full  h-[3rem] border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              className="mt-1 block w-full  h-[3rem] border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-4"
             />
           </div>
           <div className="w-full sm:w-1/2">
@@ -83,7 +83,7 @@ const InquiryForm = () => {
               value={formData.comments}
               onChange={handleChange}
               rows={4}
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-4"
             />
           </div>
         </div>

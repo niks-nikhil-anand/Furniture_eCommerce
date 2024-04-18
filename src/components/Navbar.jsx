@@ -17,6 +17,18 @@ const menuItems = [
     name: 'Contact',
     href: '/contact',
   },
+  {
+    name: 'Projects',
+    href: '/contact',
+  },
+  {
+    name: 'Fresh Flowers',
+    href: '/freshFlower',
+  },
+  {
+    name: 'Furniture',
+    href: '/furniture',
+  },
 ];
 
 export function ExampleNavbarTwo() {
@@ -44,7 +56,10 @@ export function ExampleNavbarTwo() {
               />
             </svg>
           </span>
+          <Link href={'/'}>
           <span className="font-bold">2Solution</span>
+          </Link>
+         
         </div>
         <div className="hidden lg:flex items-start">
           <ul className="ml-12 inline-flex space-x-8">
