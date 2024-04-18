@@ -1,8 +1,27 @@
-import React from 'react'
-import { ArrowUpRight } from 'lucide-react'
+"use client"
+import React, { useContext } from 'react';
+import { ArrowUpRight } from 'lucide-react';
+import { CartContext } from '../context/CartContext'; 
 import { products } from '@/constants/card';
 
 export function Card() {
+  const { cart, addToCart } = useContext(CartContext);
+
+  const isProductInCart = (productId) => {
+    return cart.some((item) => item.id === productId);
+  };
+
+  const handleAddToCart = (product) => {
+    addToCart(product);
+    if (!isProductInCart(product.id)) {
+      handleAddToInquiry();
+    }
+  };
+
+  const handleAddToInquiry = () => {
+    console.log('Added to Inquiry');
+  };
+
   return (
     <div className="container mx-auto px-4 mt-[4rem] mb-[3rem] lg:px-[5rem] lg:mb-[6rem] ">
       <h1 className="text-3xl font-bold mt-8 mb-4">Our Latest Product</h1>
@@ -18,7 +37,6 @@ export function Card() {
               <h1 className="inline-flex items-center text-lg font-semibold">
                 {product.title} &nbsp; <ArrowUpRight className="h-4 w-4" />
               </h1>
-             
               <div className="mt-4">
                 {product.tags.map((tag) => (
                   <span
@@ -31,9 +49,10 @@ export function Card() {
               </div>
               <button
                 type="button"
+                onClick={() => handleAddToCart(product)}
                 className="mt-4 w-full rounded-sm bg-black px-2 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
               >
-               Add to Inquiry
+                {isProductInCart(product.id) ? 'Added to Inquiry' : 'Add to Inquiry'}
               </button>
             </div>
           </div>

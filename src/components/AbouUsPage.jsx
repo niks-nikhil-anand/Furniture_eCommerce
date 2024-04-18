@@ -32,18 +32,17 @@ export function AboutUsPage() {
     <div>
       
 
-      <div className="mx-auto max-w-7xl px-4">
+      <div className="mx-auto max-w-7xl px-4 ">
         {/* Hero Map */}
         <div className="flex flex-col space-y-8 pb-10 pt-12 md:pt-24">
           <div className="max-w-max rounded-full border bg-gray-50 p-1 px-3">
             <p className="text-xs font-semibold leading-normal md:text-sm">About the company</p>
           </div>
-          <p className="text-3xl font-bold text-gray-900 md:text-5xl md:leading-10">
+          <p className="text-3xl font-bold text-white-900 md:text-5xl md:leading-10">
             Made with love, right here in India
           </p>
-          <p className="max-w-4xl text-base text-gray-600 md:text-xl">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore veritatis voluptates
-            neque itaque repudiandae sint, explicabo assumenda quam ratione placeat?
+          <p className="max-w-4xl text-base text-white-600 md:text-xl">
+          Our furniture is handcrafted by artisans in our workshops in Mumbai using traditional, time tested techniques and the highest quality, hand selected reclaimed teak, which is amongst the finest, and densest, tropical hardwoods. The teak we use is reclaimed from beams and columns of old structures so no trees are cut to make our furniture
           </p>
         </div>
         <div className="w-full space-y-4">
@@ -54,7 +53,7 @@ export function AboutUsPage() {
           />
         </div>
         {/* locations */}
-        <div className="my-8 flex flex-col gap-y-6 md:flex-row lg:justify-around">
+        <div className="my-8 flex flex-col gap-y-6 md:flex-row lg:justify-around ">
           {locations.map((location) => (
             <div key={location.title} className="flex flex-col space-y-3 md:w-2/4 lg:w-1/5">
               <MapPin className="h-5 w-5" />
@@ -68,13 +67,12 @@ export function AboutUsPage() {
        
         
         {/* Hiring Banner */}
-        <div className="flex flex-col items-center gap-x-4 gap-y-4 py-16 md:flex-row">
+        <div className="flex flex-col items-center gap-x-4 gap-y-4 py-16 md:flex-row border-t-[3px] border-t-black ">
           <div className="space-y-6">
             <p className="text-sm font-semibold md:text-base">Join our team &rarr;</p>
             <p className="text-3xl font-bold md:text-4xl">We&apos;re just getting started</p>
             <p className="text-base text-gray-600 md:text-lg">
-              Our philosophy is simple — hire a team of diverse, passionate people and foster a
-              culture that empowers you to do your best work.
+            All carving, molding, turning, inlay, and cane weaving is done entirely by hand by skilled artisans the way it has been for centuries. The artistry and workmanship involved in our process, coupled with the high quality materials we use, ensure that our furniture is handsome, durable, and features fine details found only in the best furniture.
             </p>
             <button
               type="button"
@@ -85,15 +83,38 @@ export function AboutUsPage() {
           </div>
           <div className="md:mt-o mt-10 w-full">
             <img
-              src="https://images.unsplash.com/photo-1605165566807-508fb529cf3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80"
+              src="https://images.unsplash.com/photo-1536437075651-01d675529a6b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGFudGlxdWUlMjBmdXJuaXR1cmV8ZW58MHx8MHx8fDA%3D"
               alt="Getting Started"
               className="rounded-lg"
             />
           </div>
         </div>
+        <div className="flex flex-col items-center gap-x-4 gap-y-4 py-16 md:flex-row border-t-[3px] border-t-black ">
+        <div className="md:mt-o mt-10 w-full">
+            <img
+              src="https://s3.amazonaws.com/viceroycasa-prod-bucket/uploads/image/cover/2552/1.jpg"
+              alt="Getting Started"
+              className="rounded-lg"
+            />
+          </div>
+          <div className="space-y-6">
+            <p className="text-sm font-semibold md:text-base">Join our team &rarr;</p>
+            <p className="text-3xl font-bold md:text-4xl">We&apos;re just getting started</p>
+            <p className="text-base text-gray-600 md:text-lg">
+            All carving, molding, turning, inlay, and cane weaving is done entirely by hand by skilled artisans the way it has been for centuries. The artistry and workmanship involved in our process, coupled with the high quality materials we use, ensure that our furniture is handsome, durable, and features fine details found only in the best furniture.
+            </p>
+            <button
+              type="button"
+              className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+            >
+              Join Now
+            </button>
+          </div>
+          
+        </div>
       </div>
       <hr className="mt-6" />
-      {/* footer */}
+     
      
     </div>
   )
