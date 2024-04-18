@@ -1,11 +1,12 @@
 "use client"
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
-import { CartContext } from '../context/CartContext'; 
+import { CartContext } from '../context/CartContext';
 import { products } from '@/constants/card';
 
 export function Card({ initialCart }) {
   const { cart, addToCart } = useContext(CartContext);
+  const [addedToInquiry, setAddedToInquiry] = useState({});
 
   const isProductInCart = (productId) => {
     return cart.some((item) => item.id === productId);
@@ -13,17 +14,13 @@ export function Card({ initialCart }) {
 
   const handleAddToCart = (product) => {
     addToCart(product);
-    handleAddToInquiry();
-  };
-
-  const handleAddToInquiry = () => {
-    console.log('Added to Inquiry');
+    setAddedToInquiry((prev) => ({ ...prev, [product.id]: true }));
   };
 
   return (
-    <div className="container mx-auto px-4 mt-[4rem] mb-[3rem] lg:px-[5rem] lg:mb-[6rem] ">
+    <div className="container mx-auto px-4 mt-[4rem] mb-[3rem] lg:px-[5rem] lg:mb-[6rem]">
       <h1 className="text-3xl font-bold mt-8 mb-4">Our Latest Product</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {products.map((product) => (
           <div key={product.id} className="w-[300px] rounded-md border bg-[#FFEBC4]">
             <img
@@ -49,9 +46,9 @@ export function Card({ initialCart }) {
                 type="button"
                 onClick={() => handleAddToCart(product)}
                 className="mt-4 w-full rounded-sm bg-black px-2 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                disabled={isProductInCart(product.id)}
+                disabled={isProductInCart(product.id) || addedToInquiry[product.id]}
               >
-                {isProductInCart(product.id) ? 'Added to Inquiry' : 'Add to Inquiry'}
+                {addedToInquiry[product.id] ? 'Added to Inquiry' : 'Add to Inquiry'}
               </button>
             </div>
           </div>
