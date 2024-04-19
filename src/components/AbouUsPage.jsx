@@ -1,7 +1,8 @@
 'use client'
-
 import React from 'react'
 import {  MapPin } from 'lucide-react'
+import Image from 'next/image'
+import googleMap from '../../public/googleMap.jpg'
 
 
 
@@ -46,10 +47,12 @@ export function AboutUsPage() {
           </p>
         </div>
         <div className="w-full space-y-4">
-          <img
+          <Image
             className="h-[200px] w-full rounded-xl object-cover md:h-full"
-            src="https://dev-ui-image-assets.s3.ap-south-1.amazonaws.com/google-map.jpg"
+            src={googleMap}
             alt=""
+            height={200}
+            width={200}
           />
         </div>
         {/* locations */}
@@ -82,19 +85,23 @@ export function AboutUsPage() {
             </button>
           </div>
           <div className="md:mt-o mt-10 w-full">
-            <img
+            <Image
               src="https://images.unsplash.com/photo-1536437075651-01d675529a6b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGFudGlxdWUlMjBmdXJuaXR1cmV8ZW58MHx8MHx8fDA%3D"
               alt="Getting Started"
+              height={400}
+            width={400}
               className="rounded-lg"
             />
           </div>
         </div>
         <div className="flex flex-col items-center gap-x-4 gap-y-4 py-16 md:flex-row border-t-[3px] border-t-black ">
         <div className="md:mt-o mt-10 w-full">
-            <img
-              src="https://s3.amazonaws.com/viceroycasa-prod-bucket/uploads/image/cover/2552/1.jpg"
+            <Image
+              src="https://images.unsplash.com/photo-1536437075651-01d675529a6b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzh8fGFudGlxdWUlMjBmdXJuaXR1cmV8ZW58MHx8MHx8fDA%3D"
               alt="Getting Started"
               className="rounded-lg"
+              height={400}
+            width={400}
             />
           </div>
           <div className="space-y-6">

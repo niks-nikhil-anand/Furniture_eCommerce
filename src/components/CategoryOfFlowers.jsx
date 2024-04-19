@@ -1,10 +1,11 @@
 import React from 'react';
 import { categories } from '@/constants/category.js';
+import Image from 'next/image';
 
 const Category = ({ name, image }) => (
   <div className="w-32 flex flex-col items-center justify-center">
     <div className="w-20 h-20 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
-      <img src={image} alt={name} className="w-full h-full object-cover" />
+      <Image src={image} alt={name} width={80} height={80}className="w-full h-full object-cover" />
     </div>
     <p className="mt-2 text-sm text-center">{name}</p>
   </div>

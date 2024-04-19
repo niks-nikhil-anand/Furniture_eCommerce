@@ -4,7 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 import { CartContext } from '../context/CartContext';
 import { products } from '@/constants/card';
 import { motion } from "framer-motion";
-
+import Image from 'next/image';
 
 export function Card({ initialCart }) {
   const { cart, addToCart } = useContext(CartContext);
@@ -25,10 +25,12 @@ export function Card({ initialCart }) {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {products.map((product) => (
           <div key={product.id} className="w-[300px] rounded-md border bg-[#FFEBC4]">
-            <img
+            <Image
               src={product.image}
               alt={product.title}
-              className="h-[200px] w-full rounded-t-md object-cover"
+              height={200} // Set the height here
+              width={300} // Set the width here
+              className="w-full rounded-t-md object-cover"
             />
             <div className="p-4">
               <h1 className="inline-flex items-center text-lg font-semibold">
@@ -49,8 +51,8 @@ export function Card({ initialCart }) {
                 onClick={() => handleAddToCart(product)}
                 className="mt-4 w-full rounded-sm bg-black px-1 py-1.5 text-sm font-semibold  text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
                 whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.6 }}
-        transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                whileTap={{ scale: 0.6 }}
+                transition={{ type: "spring", stiffness: 400, damping: 17 }}
                 disabled={isProductInCart(product.id) || addedToInquiry[product.id]}
               >
                 {addedToInquiry[product.id] ? 'Added to Inquiry' : 'Add to Inquiry'}

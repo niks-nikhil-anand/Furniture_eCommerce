@@ -2,10 +2,12 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { CartContext } from '../../context/CartContext';
-import { products } from '@/constants/card';
 import { motion } from "framer-motion";
 
-import { Client, Databases } from "appwrite";
+import { Client, Databases ,Query } from "appwrite";
+import Link from 'next/link';
+import Image from 'next/image';
+import { products } from '@/constants/card';
 
 export function Card({ initialCart }) {
   const { cart, addToCart } = useContext(CartContext);
@@ -21,13 +23,13 @@ export function Card({ initialCart }) {
 
     let promise = databases.listDocuments(
       "6621368f47a214f49511",
-      "662139e44987d99c5371",
-      []
+      "662260f77220083ed8f1",
+      [Query.select(["category", "furniture"])]
     );
 
     promise.then(function (response) {
       console.log(response);
-      setBlogs(response.documents);
+      setBlogs(response.documents[0]);
     }, function (error) {
       console.log(error);
     });
@@ -45,13 +47,16 @@ export function Card({ initialCart }) {
   return (
     <div className="container mx-auto px-4 mt-[4rem] mb-[3rem] lg:px-[5rem] lg:mb-[6rem]">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {blogs.map((product) => (
-          <motion.div key={product.uniqueId} className="w-[300px] rounded-md border bg-[#FFEBC4] cursor-pointer"
+        {products.map((product) => (
+          <Link  href={'/furniture/' + product.slug} >
+          <motion.div key={product.id }className="w-[300px] rounded-md border bg-[#FFEBC4] cursor-pointer"
             whileHover={{ scale: 1.1 }}
           >
-            <img
+            <Image
               src={product.image}
               alt={product.title}
+              width={200}
+              height={200}
               className="h-[200px] w-full rounded-t-md object-cover"
             />
             <div className="p-4">
@@ -62,7 +67,7 @@ export function Card({ initialCart }) {
               <span
                   className="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900"
                 >
-                  {product.tag1} 
+                  {product.tags[0]} 
                 </span>
               </div>
               <motion.button
@@ -78,6 +83,8 @@ export function Card({ initialCart }) {
               </motion.button>
             </div>
           </motion.div>
+          </Link>
+          
         ))}
       </div>
     </div>

@@ -65,12 +65,12 @@ export function ExampleNavbarTwo() {
           <ul className="ml-12 inline-flex space-x-8">
             {menuItems.map((item) => (
               <li key={item.name}>
-                <a
+                <Link
                   href={item.href}
                   className="text-sm font-semibold text-gray-800 hover:text-gray-900"
                 >
                   {item.name}
-                </a>
+                  </Link>
               </li>
             ))}
           </ul>
@@ -128,7 +128,7 @@ export function ExampleNavbarTwo() {
                 <div className="mt-6">
                   <nav className="grid gap-y-4">
                     {menuItems.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
                         href={item.href}
                         className="-m-3 flex items-center rounded-md p-3 text-sm font-semibold hover:bg-gray-50"
@@ -136,7 +136,7 @@ export function ExampleNavbarTwo() {
                         <span className="ml-3 text-base font-medium text-gray-900">
                           {item.name}
                         </span>
-                      </a>
+                        </Link>
                     ))}
                   </nav>
                 </div>

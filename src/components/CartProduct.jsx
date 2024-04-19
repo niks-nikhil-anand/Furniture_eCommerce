@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { Trash, Heart } from 'lucide-react';
 import InquiryForm from './InquiryForm';
 import { CartContext } from '../context/CartContext.js'; 
+import Image from 'next/image';
 
 export function Cart() {
   const { cart, removeFromCart, clearCart } = useContext(CartContext);
@@ -27,10 +28,12 @@ export function Cart() {
         {cart.map((product) => (
           <li key={product.id} className="flex flex-col py-6 sm:flex-row sm:justify-between">
             <div className="flex w-full space-x-2 sm:space-x-4">
-              <img
+              <Image
                 className="h-20 w-20 flex-shrink-0 rounded object-contain outline-none dark:border-transparent sm:h-32 sm:w-32"
-                src={product.image}
-                alt={product.name}
+                src={product.imageUrl}
+                alt={product.title}
+                height={32} // Add height here
+                width={32} // Add width here
               />
               <div className="flex w-full flex-col justify-between pb-4">
                 <div className="flex w-full justify-between space-x-2 pb-2">
@@ -69,4 +72,3 @@ export function Cart() {
 }
 
 export default Cart;
-
