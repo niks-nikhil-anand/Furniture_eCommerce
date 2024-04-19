@@ -49,13 +49,13 @@ const Tabs = ({
                 layoutId="clickedbutton"
                 transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
                 className={cn(
-                  "absolute inset-0 bg-gray-200 dark:bg-zinc-800 rounded-full ",
+                  "absolute inset-0 bg-[#e7cfb4] dark:bg-zinc-800 rounded-full ",
                   activeTabClassName
                 )}
               />
             )}
 
-            <span className="relative block text-black dark:text-white">
+            <span className="relative block text-[#563232] dark:text-white font-bold">
               {tab.title}
             </span>
           </button>
@@ -77,7 +77,7 @@ const FadeInDiv = ({ className, tabs, hovering }) => {
     return tab.value === tabs[0].value;
   };
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full h-full ">
       {tabs.map((tab, idx) => (
         <motion.div
           key={tab.value}
