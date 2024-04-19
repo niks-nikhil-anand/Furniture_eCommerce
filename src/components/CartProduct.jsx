@@ -30,7 +30,7 @@ export function Cart() {
             <div className="flex w-full space-x-2 sm:space-x-4">
               <Image
                 className="h-20 w-20 flex-shrink-0 rounded object-contain outline-none dark:border-transparent sm:h-32 sm:w-32"
-                src={product.imageUrl}
+                src={product.image}
                 alt={product.title}
                 height={32} // Add height here
                 width={32} // Add width here
