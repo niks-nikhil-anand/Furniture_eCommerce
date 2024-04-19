@@ -48,8 +48,8 @@ export function Card({ initialCart }) {
     <div className="container mx-auto px-4 mt-[4rem] mb-[3rem] lg:px-[5rem] lg:mb-[6rem]">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {products.map((product) => (
-          <Link  href={'/furniture/' + product.slug} >
-          <motion.div key={product.id }className="w-[300px] rounded-md border bg-[#FFEBC4] cursor-pointer"
+          <Link key={product.id }  href={'/furniture/' + product.slug} >
+          <motion.div className="w-[300px] rounded-md border bg-[#FFEBC4] cursor-pointer"
             whileHover={{ scale: 1.1 }}
           >
             <Image

@@ -6,6 +6,7 @@ import { Footer } from "@/components/Footer";
 import { ExampleNavbarTwo } from "@/components/Navbar";
 import { CartProvider } from "../context/CartContext.js"; 
 import { useRouter } from 'next/navigation'
+import CartIcon from "@/components/fixedCart";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,7 +28,7 @@ export default function RootLayout({ children }) {
         {!isAdminRoute && <ExampleNavbarTwo />}
         <CartProvider> {/* Add CartProvider here */}
           {children}
-          
+          <CartIcon/>
         </CartProvider>
         {!isAdminRoute &&  <Footer />}
        

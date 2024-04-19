@@ -3,19 +3,17 @@ import React, { useContext, useState, useEffect } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { CartContext } from '../../../context/CartContext';
 import { motion } from "framer-motion";
-import { useParams } from 'next/navigation'
 
+import Link from 'next/link';
 import Image from 'next/image';
+import { products } from '@/constants/card';
 
-export function Card({}) {
+export function Card({ initialCart }) {
   const { cart, addToCart } = useContext(CartContext);
   const [addedToInquiry, setAddedToInquiry] = useState({});
-  const [blogs, setBlogs] = useState([]);
-  // const params = useParams()
-  
-    
 
  
+
   const isProductInCart = (productId) => {
     return cart.some((item) => item.id === productId);
   };
@@ -26,45 +24,45 @@ export function Card({}) {
   };
 
   return (
-    <div className="overflow-hidden">
-      <div className="mx-auto max-w-[90%] px-5 py-24">
-        <div className="mx-auto flex flex-wrap items-center lg:w-4/5">
-         
-          <div key={blogs.id} className="w-full lg:w-1/2">
-            <Image
-              src={blogs?.imageUrl}
-              alt={blogs?.title} 
-              className="h-64 w-full rounded object-cover lg:h-96"
-            />
-          </div>
-          <div className="mt-6 w-full lg:mt-0 lg:w-1/2 lg:pl-10">
-            <h1 className="text-sm font-semibold tracking-widest text-gray-500">
-              {blogs.title} &nbsp; <ArrowUpRight className="h-4 w-4" />
-            </h1>
-            <div className="mt-4">
-              <p className="leading-relaxed">
-                {blogs?.title} 
-              </p>
-              <div className="mb-5 mt-6 flex items-center border-b-2 border-t-2 border-gray-100 pb-5 pt-5">
-                <p className="leading-relaxed">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur rem amet repudiandae
-                  neque adipisci eum enim, natus illo inventore totam?
-                </p>
-              </div>
-            </div>
-            <motion.button
-              type="button"
-              onClick={() => handleAddToCart(blogs)} 
-              className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+    <div className="container mx-auto px-4 mt-[4rem] mb-[3rem] lg:px-[5rem] lg:mb-[6rem]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {products.map((product) => (
+          <Link key={product.id} href={'/furniture/' + product.slug}>
+            <motion.div className="w-[300px] rounded-md border bg-[#FFEBC4] cursor-pointer"
+              key={product.id}
               whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.6 }}
-              transition={{ type: "spring", stiffness: 400, damping: 17 }}
-              disabled={isProductInCart(blogs.id) || addedToInquiry[blogs.id]} 
             >
-              {addedToInquiry[blogs.id] ? 'Added to Inquiry' : 'Add to Inquiry'} {/* Changed from product.id */}
-            </motion.button>
-          </div>
-        </div>
+              <Image
+                src={product.image}
+                alt={product.title}
+                width={200}
+                height={200}
+                className="h-[200px] w-full rounded-t-md object-cover"
+              />
+              <div className="p-4">
+                <h1 className="inline-flex items-center text-lg font-semibold">
+                  {product.title} &nbsp; <ArrowUpRight className="h-4 w-4" />
+                </h1>
+                <div className="mt-4">
+                  <span className="mb-2 mr-2 inline-block rounded-full bg-gray-100 px-3 py-1 text-[10px] font-semibold text-gray-900">
+                    {product.tags[0]} 
+                  </span>
+                </div>
+                <motion.button
+                  type="button"
+                  onClick={() => handleAddToCart(product)}
+                  className="mt-4 w-full rounded-sm bg-black px-1 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.6 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                  disabled={isProductInCart(product.id) || addedToInquiry[product.id]}
+                >
+                  {addedToInquiry[product.id] ? 'Added to Inquiry' : 'Add to Inquiry'}
+                </motion.button>
+              </div>
+            </motion.div>
+          </Link>
+        ))}
       </div>
     </div>
   );

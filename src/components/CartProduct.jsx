@@ -22,7 +22,7 @@ export function Cart() {
     <div className="mx-auto flex max-w-3xl flex-col space-y-4 p-6 px-2 sm:p-10 sm:px-2">
       <h2 className="text-3xl font-bold">Your selected items...</h2>
       <p className="mt-3 text-sm font-medium text-gray-700">
-        Send us an inquiry with these selected products and we'll get back to you with our best quote. Feel free to specify any additional requirements such as color options, quantity requirements, etc.
+        Send us an inquiry with these selected products and we&apos;ll get back to you with our best quote. Feel free to specify any additional requirements such as color options, quantity requirements, etc.
       </p>
       <ul className="flex flex-col divide-y divide-[#82714F]">
         {cart.map((product) => (

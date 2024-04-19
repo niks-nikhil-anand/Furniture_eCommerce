@@ -19,7 +19,7 @@ const menuItems = [
   },
   {
     name: 'Projects',
-    href: '/contact',
+    href: '/project',
   },
   {
     name: 'Fresh Flowers',
