@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import AdminNavbar from '@/components/AdminNavbar'; // Ensure correct casing and path
 
-const page = () => {
+const Page = () => {
   return (
-    <div>page</div>
-  )
+    <div>
+      <AdminNavbar />
+    </div>
+  );
 }
 
-export default page
+export default Page;

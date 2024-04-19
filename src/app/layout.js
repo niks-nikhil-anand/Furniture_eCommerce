@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   const router = useRouter();
 
   
-  const isAdminRoute = router.pathname != "/admin";
+  const isAdminRoute = router.pathname == "/admin";
 
   return (
     <html lang="en">
