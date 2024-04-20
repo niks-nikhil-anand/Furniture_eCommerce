@@ -1,10 +1,13 @@
 
+import { ParallaxScrollDemo } from '@/components/Gallery'
+import { HeroScrollDemo } from '@/components/Tablet'
 import React from 'react'
 
 const page = () => {
   return (
     <div>
-       <h1>Projects</h1>
+      <HeroScrollDemo/>
+      <ParallaxScrollDemo/>
     </div>
   )
 }
