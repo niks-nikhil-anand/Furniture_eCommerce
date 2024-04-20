@@ -8,7 +8,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 async function getData() {
-  const apiEndpoint = "http://localhost:3000/api/furniture";
+  const apiEndpoint = `${process.env.domain}api/furniture`;
 
   const res = await fetch(`${apiEndpoint}`, {
    method : 'GET',

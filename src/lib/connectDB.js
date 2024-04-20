@@ -11,6 +11,7 @@ export default async () => {
 
         await mongoose.connect("mongodb+srv://niksananddeveloper:X6qa8y7oFgCMJmOt@cluster0.nrvgevm.mongodb.net/furniture", DB_OPTION);
         console.log("Database connected Successfully....");
+        console.log(process.env.customKey)
     } catch (error) {
         console.log(error);
     }
