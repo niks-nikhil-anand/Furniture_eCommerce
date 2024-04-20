@@ -1,78 +1,98 @@
-"use client"
-import Link from "next/link";
-import { useState } from "react";
+import React from 'react'
+import { BarChart, Wallet, Newspaper, BellRing, Paperclip, LogIn } from 'lucide-react'
+import Link from 'next/link'
 
-function AdminNavbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
-
+export function AdminNavbar() {
   return (
-    <nav className="bg-gray-800">
-      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-        <div className="relative flex items-center justify-between h-16">
-          <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <button
-              onClick={toggleNavbar}
-              type="button"
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out"
-              aria-label="Main menu"
-              aria-expanded={isOpen ? "true" : "false"}
+    <aside className="flex h-screen w-64 flex-col overflow-y-auto border-r bg-white px-5 py-8">
+      <a href="#">
+        <svg
+          width="40"
+          height="46"
+          viewBox="0 0 50 56"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M23.2732 0.2528C20.8078 1.18964 2.12023 12.2346 1.08477 13.3686C0 14.552 0 14.7493 0 27.7665C0 39.6496 0.0986153 41.1289 0.83823 42.0164C2.12023 43.5449 23.2239 55.4774 24.6538 55.5267C25.9358 55.576 46.1027 44.3832 48.2229 42.4602C49.3077 41.474 49.3077 41.3261 49.3077 27.8158C49.3077 14.3055 49.3077 14.1576 48.2229 13.1714C46.6451 11.7415 27.1192 0.450027 25.64 0.104874C24.9497 -0.0923538 23.9142 0.00625992 23.2732 0.2528ZM20.2161 21.8989C20.2161 22.4906 18.9835 23.8219 17.0111 25.3997C15.2361 26.7803 13.8061 27.9637 13.8061 28.0623C13.8061 28.1116 15.2361 29.0978 16.9618 30.2319C18.6876 31.3659 20.2655 32.6479 20.4134 33.0917C20.8078 34.0286 19.871 35.2119 18.8355 35.2119C17.8001 35.2119 9.0233 29.3936 8.67815 28.5061C8.333 27.6186 9.36846 26.5338 14.3485 22.885C17.6521 20.4196 18.4904 20.0252 19.2793 20.4196C19.7724 20.7155 20.2161 21.3565 20.2161 21.8989ZM25.6893 27.6679C23.4211 34.9161 23.0267 35.7543 22.1391 34.8668C21.7447 34.4723 22.1391 32.6479 23.6677 27.9637C26.2317 20.321 26.5275 19.6307 27.2671 20.3703C27.6123 20.7155 27.1685 22.7864 25.6893 27.6679ZM36.0932 23.2302C40.6788 26.2379 41.3198 27.0269 40.3337 28.1609C39.1503 29.5909 31.6555 35.2119 30.9159 35.2119C29.9298 35.2119 28.9436 33.8806 29.2394 33.0424C29.3874 32.6479 30.9652 31.218 32.7403 29.8867L35.9946 27.4706L32.5431 25.1532C30.6201 23.9205 29.0915 22.7371 29.0915 22.5892C29.0915 21.7509 30.2256 20.4196 30.9159 20.4196C31.3597 20.4196 33.6771 21.7016 36.0932 23.2302Z"
+            fill="black"
+          />
+        </svg>
+      </a>
+      <div className="mt-6 flex flex-1 flex-col justify-between">
+        <nav className="-mx-3 space-y-6 ">
+          <div className="space-y-3 ">
+            <label className="px-3 text-xs font-semibold uppercase text-gray-900">analytics</label>
+            <Link
+              className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+              href="/admin/dashboard"
             >
-              <svg
-                className="block h-6 w-6"
-                stroke="currentColor"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  className={isOpen ? "hidden" : "inline-flex"}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-                <path
-                  className={isOpen ? "inline-flex" : "hidden"}
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </button>
-          </div>
-          <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-            <div className="flex-shrink-0">
-              <Link href="/" className="text-white font-bold text-xl">Your Logo
+              <BarChart className="h-5 w-5" aria-hidden="true" />
+              <span className="mx-2 text-sm font-medium">Dashboard</span>
               </Link>
-            </div>
-            <div className="hidden sm:block sm:ml-6">
-              <div className="flex">
-                <Link href="/" className="px-3 py-2 rounded-md text-sm font-medium leading-5 text-white hover:text-gray-300 focus:outline-none focus:text-white transition duration-150 ease-in-out">
-                    Home
-              
-                </Link>
-                {/* Add more links here */}
-              </div>
-            </div>
+            <a
+              className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+              href="#"
+            >
+              <Wallet className="h-5 w-5" aria-hidden="true" />
+              <span className="mx-2 text-sm font-medium">Sales</span>
+            </a>
+          </div>
+          <div className="space-y-3 ">
+            <label className="px-3 text-xs font-semibold uppercase text-gray-900">content</label>
+            <a
+              className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+              href="#"
+            >
+              <Newspaper className="h-5 w-5" aria-hidden="true" />
+              <span className="mx-2 text-sm font-medium">Add Products</span>
+            </a>
+            <a
+              className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+              href="#"
+            >
+              <BellRing className="h-5 w-5" aria-hidden="true" />
+              <span className="mx-2 text-sm font-medium">All Products</span>
+            </a>
+            <a
+              className="flex transform items-center rounded-lg px-3 py-2 text-gray-600 transition-colors duration-300 hover:bg-gray-100 hover:text-gray-700"
+              href="#"
+            >
+              <Paperclip className="h-5 w-5" aria-hidden="true" />
+              <span className="mx-2 text-sm font-medium">Projects</span>
+            </a>
+          </div>
+        </nav>
+        <div className="mt-6">
+          <div className="rounded-lg bg-gray-100 p-3 ">
+            <h2 className="text-sm font-medium text-gray-800">New feature availabel!</h2>
+            <p className="mt-1 text-xs text-gray-500">
+            An admin portal  provides administrators with access to management tools and information related to their organization's systems, network, or applications.
+            </p>
+            <img
+              className="mt-2 h-32 w-full rounded-lg object-cover"
+              src="https://images.unsplash.com/photo-1605379399642-870262d3d051?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1806&q=80"
+              alt="Feature"
+            />
+          </div>
+          <div className="mt-6 flex items-center justify-between">
+            <a href="#" className="flex items-center gap-x-2">
+              <img
+                className="h-7 w-7 rounded-full object-cover"
+                src="https://overreacted.io/static/profile-pic-c715447ce38098828758e525a1128b87.jpg"
+                alt="avatar"
+              />
+              <span className="text-sm font-medium text-gray-700">Dan Abromov</span>
+            </a>
+            <a
+              href="#"
+              className="rotate-180 text-gray-800 transition-colors duration-200 hover:text-gray-900"
+            >
+              <LogIn className="h-5 w-5" />
+            </a>
           </div>
         </div>
       </div>
-      {/* Mobile menu */}
-      <div className={isOpen ? "block" : "hidden sm:hidden"}>
-        <div className="px-2 pt-2 pb-3">
-          <Link href="/" className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-300 focus:outline-none focus:text-white transition duration-150 ease-in-out">
-              Home
-            
-          </Link>
-          {/* Add more links here */}
-        </div>
-      </div>
-    </nav>
-  );
+    </aside>
+  )
 }
-
-export default AdminNavbar;

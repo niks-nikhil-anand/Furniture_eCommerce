@@ -1,12 +1,14 @@
 'use client'
-
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Footer } from "@/components/Footer";
 import { ExampleNavbarTwo } from "@/components/Navbar";
 import { CartProvider } from "../context/CartContext.js"; 
-import { useRouter } from 'next/navigation'
+
 import CartIcon from "@/components/fixedCart";
+import { usePathname } from "next/navigation";
+import { AdminNavbar } from '../components/AdminNavbar'
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,21 +18,25 @@ const inter = Inter({ subsets: ["latin"] });
 // };
 
 export default function RootLayout({ children }) {
-  const router = useRouter();
-
-  
-  const isAdminRoute = router.pathname == "/admin";
+  const pathName = usePathname()
+  console.log(pathName)
 
   return (
     <html lang="en">
       <body className={inter.className}>
-        {/* Conditionally render ExampleNavbarTwo */}
-        {!isAdminRoute && <ExampleNavbarTwo />}
-        <CartProvider> {/* Add CartProvider here */}
+        {
+          pathName !=='/admin/dashboard'?<ExampleNavbarTwo />
+        : <AdminNavbar/>
+        }
+        <CartProvider> 
           {children}
           <CartIcon/>
         </CartProvider>
-        {!isAdminRoute &&  <Footer />}
+        {
+          pathName !=='/admin/dashboard'? <Footer />
+        : <AdminFooter/>
+        }
+      
        
       </body>
     </html>

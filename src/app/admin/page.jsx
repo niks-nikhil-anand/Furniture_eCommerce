@@ -75,7 +75,9 @@ export default function SignInTwo() {
             <Image
               className="h-full w-full rounded-md object-cover object-top"
               src="https://plus.unsplash.com/premium_photo-1661302846246-e8faef18255d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGFkbWlufGVufDB8fDB8fHww"
-              alt=""
+              alt="image"
+              width={300}
+              height={300}
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
