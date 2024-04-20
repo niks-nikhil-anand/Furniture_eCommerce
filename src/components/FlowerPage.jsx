@@ -7,7 +7,7 @@ import {CartContext} from '../context/CartContext'
 import Image from 'next/image';
 
 async function getData() {
-  const apiEndpoint = `${process.env.domain}api/furniture`;
+  const apiEndpoint = `${process.env.domain}api/flower`;
 
   const res = await fetch(`${apiEndpoint}`, {
    method : 'GET',

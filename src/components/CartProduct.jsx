@@ -25,12 +25,13 @@ export function Cart() {
         Send us an inquiry with these selected products and we&apos;ll get back to you with our best quote. Feel free to specify any additional requirements such as color options, quantity requirements, etc.
       </p>
       <ul className="flex flex-col divide-y divide-[#82714F]">
+        {console.log(cart)}
         {cart.map((product) => (
-          <li key={product.id} className="flex flex-col py-6 sm:flex-row sm:justify-between">
+          <li key={product._id} className="flex flex-col py-6 sm:flex-row sm:justify-between">
             <div className="flex w-full space-x-2 sm:space-x-4">
               <Image
                 className="h-20 w-20 flex-shrink-0 rounded object-contain outline-none dark:border-transparent sm:h-32 sm:w-32"
-                src={product.image}
+                src={product.imageUrl}
                 alt={product.title}
                 height={32} // Add height here
                 width={32} // Add width here
@@ -42,7 +43,7 @@ export function Cart() {
                     <p className="text-sm">{product.color}</p>
                   </div>
                   <div className="text-right">
-                    <button type="button" onClick={() => removeFromCart(product.id)} className="flex items-center space-x-2 px-2 py-1 pl-0">
+                    <button type="button" onClick={() => removeFromCart(product?._id)} className="flex items-center space-x-2 px-2 py-1 pl-0">
                       <Trash size={16} />
                       <span>Remove</span>
                     </button>

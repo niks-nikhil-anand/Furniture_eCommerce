@@ -16,6 +16,7 @@ const CartProvider = ({ children }) => {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       localStorage.setItem('cart', JSON.stringify(cart));
+      
     }
   }, [cart]);
 
@@ -24,7 +25,7 @@ const CartProvider = ({ children }) => {
   };
 
   const removeFromCart = (productId) => {
-    const updatedCart = cart.filter((item) => item.id !== productId);
+    const updatedCart = cart.filter((item) => item._id !== productId);
     setCart(updatedCart);
   };
 
