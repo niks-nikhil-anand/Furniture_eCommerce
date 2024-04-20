@@ -27,7 +27,7 @@ const Tabs = ({
     <>
       <div
         className={cn(
-          "flex flex-row items-center justify-start perspective:1000px relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full",
+          "flex flex-row items-center justify-start perspective:1000px relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full mt-5 shadow-lg shadow-[#563232] bg-[#563232] ",
           containerClassName
         )}
       >
@@ -55,7 +55,7 @@ const Tabs = ({
               />
             )}
 
-            <span className="relative block text-[#563232] dark:text-white font-bold">
+            <span className="relative block  dark:text-white font-bold text-white">
               {tab.title}
             </span>
           </button>
