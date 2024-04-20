@@ -8,7 +8,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 async function getData() {
-  const apiEndpoint = "http://localhost:3000/api/post";
+  const apiEndpoint = "http://localhost:3000/api/furniture";
 
   const res = await fetch(`${apiEndpoint}`, {
    method : 'GET',
@@ -35,6 +35,7 @@ export function Card({ initialCart }) {
       try {
         const data = await getData(); 
         setProducts(data.result); 
+        console.log(products)
       } catch (error) {
         console.error("Failed to fetch data:", error);
       }
@@ -65,7 +66,7 @@ export function Card({ initialCart }) {
                 alt={product.title}
                 width={200}
                 height={200}
-                className="h-[200px] w-full rounded-t-md object-cover"
+                className=" w-full rounded-t-md object-cover"
               />
               <div className="p-4">
                 <h1 className="inline-flex items-center text-lg font-semibold">
