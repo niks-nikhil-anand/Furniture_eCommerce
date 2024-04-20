@@ -1,39 +1,19 @@
 "use client"
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext, useState } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { CartContext } from '../../context/CartContext';
 import { motion } from "framer-motion";
 
-import { Client, Databases ,Query } from "appwrite";
 import Link from 'next/link';
 import Image from 'next/image';
-import { products } from '@/constants/card';
+
 
 export function Card({ initialCart }) {
   const { cart, addToCart } = useContext(CartContext);
   const [addedToInquiry, setAddedToInquiry] = useState({});
   const [blogs, setBlogs] = useState([]);
 
-  useEffect(() => {
-    const client = new Client()
-      .setEndpoint("https://cloud.appwrite.io/v1")
-      .setProject("66213460e2522f292260");
-
-    const databases = new Databases(client);
-
-    let promise = databases.listDocuments(
-      "6621368f47a214f49511",
-      "662260f77220083ed8f1",
-      [Query.select(["category", "furniture"])]
-    );
-
-    promise.then(function (response) {
-      console.log(response);
-      setBlogs(response.documents[0]);
-    }, function (error) {
-      console.log(error);
-    });
-  }, []);
+ 
 
   const isProductInCart = (productId) => {
     return cart.some((item) => item.id === productId);
