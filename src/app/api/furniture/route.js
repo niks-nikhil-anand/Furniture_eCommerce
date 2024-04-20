@@ -1,5 +1,3 @@
-
-
 import connectDB from "@/lib/connectDB";
 import { NextResponse } from "next/server";
 import Product from "@/models/productModels";

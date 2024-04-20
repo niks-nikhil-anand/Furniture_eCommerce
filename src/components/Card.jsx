@@ -49,7 +49,7 @@ export function Card({ initialCart }) {
               <motion.button
                 type="button"
                 onClick={() => handleAddToCart(product)}
-                className="mt-4 w-full rounded-sm bg-black px-1 py-1.5 text-sm font-semibold  text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+                className="mt-4 w-full rounded-sm bg-black px-1 py-1.5 text-sm font-semibold  text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black cursor-pointer"
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.6 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -66,8 +66,8 @@ export function Card({ initialCart }) {
 }
 
 export async function getServerSideProps() {
-  // Fetch initial cart data here
-  const initialCart = []; // Replace this with your actual data fetching logic
+ 
+  const initialCart = [];
 
   return {
     props: {
