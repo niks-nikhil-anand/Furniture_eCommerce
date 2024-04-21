@@ -1,14 +1,9 @@
-import { AddProducts } from '@/components/AddProducts';
-import { AdminNavbar } from '@/components/AdminNavbar';
-import React from 'react';
+import React from 'react'
 
-
-const Page = () => {
+const page = () => {
   return (
-    <div className='flex justify-center'>
-   {/* <AdminNavbar/> */}
-    </div>
-  );
+    <div>page</div>
+  )
 }
 
-export default Page;
+export default page
