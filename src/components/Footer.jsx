@@ -2,22 +2,22 @@ import React from 'react'
 
 export function Footer() {
   return (
-    <footer className="w-full pb-2 text-white pt-[3rem] shadow-lg	opacity-75
-    bg-[url('../../public/bg.jpg')]
+    <footer className="w-full pb-2 text-black pt-[3rem] shadow-lg	opacity-75 bg-[#FFEBC4]
+   ]
     "
     >
       <div className="mx-auto flex max-w-6xl flex-col items-start mr-[3rem] md:flex-row justify-center ">
        
-        <div className="mt-8 grid grid-cols-2 gap-6 md:mt-0 lg:w-3/4 lg:grid-cols-3 ">
-          {Array.from({ length: 2 }).map((_, i) => (
+        <div className="mt-8 grid grid-cols-2 gap-6 md:mt-0 lg:w-3/4 lg:grid-cols-3 ml-9 ">
+          {Array.from({ length: 1 }).map((_, i) => (
             <div key={i} className="mb-8 lg:mb-0">
               <p className="mb-6 text-lg font-semibold  ">Quicks Links</p>
-              <ul className="flex flex-col space-y-4 text-[14px] font-medium text-black-500">
+              <ul className="flex flex-col space-y-4 text-[14px] text-black font-medium text-black-500">
                 <li>About us</li>
-                <li>Company History</li>
-                <li>Our Team</li>
-                <li>Our Vision</li>
-                <li>Press Release</li>
+                <li>Furniture</li>
+                <li>Flowers</li>
+                <li>Projects</li>
+                <li>Contact Us</li>
               </ul>
             </div>
           ))}
@@ -38,10 +38,10 @@ export function Footer() {
               fill="black"
             />
           </svg>
-          <span className="ml-4 text-lg font-bold text-white">2Solution</span>
+          <span className="ml-4 text-lg font-bold text-black">2Solution</span>
         </div>
-        <div className="mt-4 md:mt-0 text-white">
-          <p className="text-sm font-medium text-white">The Royal Oak © 2024 2Solution. All rights reserved.</p>
+        <div className="mt-4 md:mt-0 text-black">
+          <p className="text-sm font-medium text-black">The Royal Oak © 2024 2Solution. All rights reserved.</p>
         </div>
       </div>
     </footer>
