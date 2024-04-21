@@ -51,6 +51,7 @@ export function Card() {
       {products && products.map((product) => (
          
             <motion.div
+            key={product.id}
               className="w-[300px] rounded-md border bg-[#FFEBC4] cursor-pointer"
               whileHover={{ scale: 1.1 }}
             >

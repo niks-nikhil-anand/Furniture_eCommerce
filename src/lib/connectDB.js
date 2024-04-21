@@ -1,6 +1,6 @@
-import * as mongoose from "mongoose";
+import mongoose from "mongoose";
 
-export default async () => {
+const connectDB = async () => {
     try {
         const DB_OPTION = {
             user: 'niksananddeveloper',
@@ -11,8 +11,9 @@ export default async () => {
 
         await mongoose.connect("mongodb+srv://niksananddeveloper:X6qa8y7oFgCMJmOt@cluster0.nrvgevm.mongodb.net/furniture", DB_OPTION);
         console.log("Database connected Successfully....");
-        console.log(process.env.customKey)
     } catch (error) {
         console.log(error);
     }
 };
+
+export default connectDB;

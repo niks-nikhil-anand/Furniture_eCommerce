@@ -41,7 +41,7 @@ export function Card({ initialCart }) {
       }
     }
     fetchData();
-  }, []);
+  }, [products]);
 
   const isProductInCart = (productId) => {
     return cart.some((item) => item.id === productId);
