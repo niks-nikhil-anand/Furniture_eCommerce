@@ -15,7 +15,7 @@ const Gallery = () => {
     "https://images.unsplash.com/photo-1594335954551-14ed4382eb1e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTk1fHxhbnRpcXVlJTIwZnVybml0dXJlfGVufDB8fDB8fHww",
     "https://images.unsplash.com/photo-1589863089941-51eddece5107?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjEyfHxhbnRpcXVlJTIwZnVybml0dXJlfGVufDB8fDB8fHww",
     "https://images.unsplash.com/photo-1474866585491-c646d51dc360?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjI2fHxhbnRpcXVlJTIwZnVybml0dXJlfGVufDB8fDB8fHww",
-    "https://images.unsplash.com/photo-1573088422077-b6ed78408ff4?q=80&w=1917&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    
   ];
 
   return (

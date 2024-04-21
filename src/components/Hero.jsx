@@ -1,11 +1,13 @@
 "use client"
 import Image from 'next/image';
 import hero1 from '../../public/hero1.jpg';
-import hero2 from '../../public/hero2.jpg';
+import hero4 from '../../public/hero4.jpg';
+import hero2 from '../../public/hero2.avif';
+import hero3 from '../../public/hero3.avif';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 
-const images = [hero1, hero2, hero2]; 
+const images = [hero1, hero2, hero3 , hero4]; 
 
 const HeroSection = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
