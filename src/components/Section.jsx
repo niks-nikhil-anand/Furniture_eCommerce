@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 export function Section() {
@@ -7,6 +8,7 @@ export function Section() {
       {/* Heading */}
       <h1 className="text-3xl font-bold text-center text-black mb-4">Welcome to Store</h1>
         <div className='flex flex-col md:flex-row justify-center gap-2 lg:gap-[4rem] '>
+          <Link href={"/furniture"}>
         <div className="relative h-[200px] w-[280px] lg:w-[560px] rounded-md overflow-hidden mb-4">
         <Image
           src="https://images.unsplash.com/photo-1514988081842-feeaeac260e3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVybml0dXJlJTIwc3RvcmV8ZW58MHwwfDB8fHww"
@@ -26,8 +28,10 @@ export function Section() {
           </button>
         </div>
       </div>
+          </Link>
 
       {/* Second Card */}
+      <Link href={"/freshFlower"}>
       <div className="relative h-[200px] w-[280px] lg:w-[560px] rounded-md overflow-hidden">
         <Image
           src="https://images.unsplash.com/photo-1546905002-af9d9a15880a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Zmxvd2VycyUyMHNob3B8ZW58MHwwfDB8fHww"
@@ -47,6 +51,7 @@ export function Section() {
           </button>
         </div>
       </div>
+      </Link>
         </div>
     
      
