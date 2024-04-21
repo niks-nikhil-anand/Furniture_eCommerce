@@ -9,13 +9,7 @@ async function connectToDB() {
 export async function POST(req) {
   const body = await req.json();
   console.log(` apibody : ${body}`)
-  if (!body) {
-    return NextResponse.json({
-      result: result,
-      msg: "Added successfully",
-      status: 400
-    });
-  }
+ 
   try {
     await connectToDB();
     const result = await Inquirylist.create(body);

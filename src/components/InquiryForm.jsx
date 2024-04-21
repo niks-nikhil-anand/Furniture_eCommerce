@@ -1,16 +1,15 @@
 "use client"
-import React, { useState , useContext } from 'react';
-import { CartContext } from '../context/CartContext'; 
+import React, { useState, useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 
 const InquiryForm = () => {
   const [formData, setFormData] = useState({
-    
     name: '',
     email: '',
     phone: '',
     comments: '',
   });
-  const { cart } = useContext(CartContext)
+  const { cart } = useContext(CartContext);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -21,35 +20,35 @@ const InquiryForm = () => {
   };
 
   const handleSubmit = async (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  // Check if cart is not empty and any of the form fields are not empty
-  if (cart && cart.length > 0 && Object.values(formData).some(value => value !== '')) {
-    const updatedFormData = { ...formData, cartData: cart };
-    console.log('Form submitted:', updatedFormData);
+    if (cart.length > 0 && formData.name && formData.email && formData.phone) {
+      const updatedFormData = { ...formData, cartData: cart };
+      console.log('Form submitted:', updatedFormData);
 
-    const apiEndpoint = `${process.env.domain}api/inquiry`;
-    const res = await fetch(apiEndpoint, {
-      method: 'POST',
-      body: JSON.stringify(updatedFormData),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+      const apiEndpoint = `${process.env.domain}api/inquiry`;
+      const res = await fetch(apiEndpoint, {
+        method: 'POST',
+        body: JSON.stringify(updatedFormData),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
 
-    console.log('Response:', res);
+      console.log('Response:', res);
 
-    // Reset form data after successful submission
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      comments: '',
-    });
-  } else {
-    console.log('Form data or cart is empty. Form not submitted.');
-  }
-};
+      // Reset form data after successful submission
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        comments: '',
+      });
+    } else {
+      console.log('Cart is empty or form fields are empty.');
+    }
+  };
+  
 
 
   return (
@@ -118,6 +117,7 @@ const InquiryForm = () => {
       </form>
     </div>
   );
-};
+}
+
 
 export default InquiryForm
