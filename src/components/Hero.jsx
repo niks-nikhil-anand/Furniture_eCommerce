@@ -3,7 +3,7 @@ import Image from 'next/image';
 import hero1 from '../../public/hero1.jpg';
 import hero4 from '../../public/hero4.jpg';
 import hero2 from '../../public/hero2.avif';
-import hero3 from '../../public/hero3.avif';
+import hero3 from '../../public/hero3.jpg';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 

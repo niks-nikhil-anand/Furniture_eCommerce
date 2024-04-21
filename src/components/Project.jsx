@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { Tabs } from "./ui/tabs.jsx";
 import hero1 from '../../public/hero1.jpg'
+import indian from '../../public/indian.jpg'
+import edwardian from '../../public/edwardian.jpeg'
+import victorian from '../../public/victorian.jpg'
+import random from '../../public/random.jpg'
 function Project() {
   const tabs = [
     {
@@ -9,7 +13,7 @@ function Project() {
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-5 text-[1rem] md:text-4xl font-bold text-white bg-[#563232] ">
           <p>Antique Indian furniture </p>
-          <DummyContent />
+          <DummyContent1 />
         </div>
       ),
     },
@@ -19,7 +23,7 @@ function Project() {
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-[1rem] md:text-4xl font-bold text-white bg-[#563232]">
           <p>Antique Edwardian furniture</p>
-          <DummyContent />
+          <DummyContent2 />
         </div>
       ),
     },
@@ -29,7 +33,7 @@ function Project() {
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-[1rem] md:text-4xl font-bold text-white bg-[#563232]">
           <p>Antique Victorian furniture</p>
-          <DummyContent />
+          <DummyContent3 />
         </div>
       ),
     },
@@ -39,7 +43,7 @@ function Project() {
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-[1rem] md:text-4xl font-bold text-white bg-[#563232]">
           <p>Antique French furniture</p>
-          <DummyContent />
+          <DummyContent4 />
         </div>
       ),
     },
@@ -49,7 +53,7 @@ function Project() {
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-[1rem] md:text-4xl font-bold text-white bg-[#563232]">
           <p>Random tab</p>
-          <DummyContent />
+          <DummyContent5 />
         </div>
       ),
     },
@@ -62,10 +66,54 @@ function Project() {
   );
 }
 
-const DummyContent = () => {
+const DummyContent1 = () => {
+  return (
+    <Image
+     src={indian}
+      alt="dummy image"
+      width="1000"
+      height="1000"
+      className="object-cover object-left-top h-[40vh] md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
+    />
+  );
+};
+const DummyContent2 = () => {
+  return (
+    <Image
+     src={edwardian}
+      alt="dummy image"
+      width="1000"
+      height="1000"
+      className="object-cover object-left-top h-[40vh] md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
+    />
+  );
+};
+const DummyContent3 = () => {
+  return (
+    <Image
+     src={victorian}
+      alt="dummy image"
+      width="1000"
+      height="1000"
+      className="object-cover object-left-top h-[40vh] md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
+    />
+  );
+};
+const DummyContent4 = () => {
   return (
     <Image
      src={hero1}
+      alt="dummy image"
+      width="1000"
+      height="1000"
+      className="object-cover object-left-top h-[40vh] md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto"
+    />
+  );
+};
+const DummyContent5 = () => {
+  return (
+    <Image
+     src={random}
       alt="dummy image"
       width="1000"
       height="1000"

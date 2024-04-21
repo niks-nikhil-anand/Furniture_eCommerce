@@ -1,4 +1,4 @@
-
+import bed from '../../public/bed.jpg'
 
 
 export  const categories = [
