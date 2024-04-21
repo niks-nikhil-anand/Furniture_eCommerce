@@ -16,6 +16,7 @@ const Home = () => {
     <CategoriesOfFlowers/>
     <Project/>
     <Card/>
+    
     </>
   )
 }
