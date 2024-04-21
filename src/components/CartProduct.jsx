@@ -6,6 +6,7 @@ import { CartContext } from '../context/CartContext.js';
 import Image from 'next/image';
 
 export function Cart() {
+  
   const { cart, removeFromCart, clearCart } = useContext(CartContext);
   const [isHydrated, setIsHydrated] = useState(false);
 
@@ -25,7 +26,7 @@ export function Cart() {
         Send us an inquiry with these selected products and we&apos;ll get back to you with our best quote. Feel free to specify any additional requirements such as color options, quantity requirements, etc.
       </p>
       <ul className="flex flex-col divide-y divide-[#82714F]">
-        {console.log(cart)}
+       
         {cart.map((product) => (
           <li key={product._id} className="flex flex-col py-6 sm:flex-row sm:justify-between">
             <div className="flex w-full space-x-2 sm:space-x-4">

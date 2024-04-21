@@ -1,13 +1,16 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useState , useContext } from 'react';
+import { CartContext } from '../context/CartContext'; 
 
 const InquiryForm = () => {
   const [formData, setFormData] = useState({
+    
     name: '',
     email: '',
     phone: '',
     comments: '',
   });
+  const { cart } = useContext(CartContext)
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -17,18 +20,37 @@ const InquiryForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission, e.g., send data to backend or display a message
-    console.log('Form submitted:', formData);
-    // Reset form data after submission
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  // Check if cart is not empty and any of the form fields are not empty
+  if (cart && cart.length > 0 && Object.values(formData).some(value => value !== '')) {
+    const updatedFormData = { ...formData, cartData: cart };
+    console.log('Form submitted:', updatedFormData);
+
+    const apiEndpoint = `${process.env.domain}api/inquiry`;
+    const res = await fetch(apiEndpoint, {
+      method: 'POST',
+      body: JSON.stringify(updatedFormData),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    console.log('Response:', res);
+
+    // Reset form data after successful submission
     setFormData({
       name: '',
       email: '',
       phone: '',
       comments: '',
     });
-  };
+  } else {
+    console.log('Form data or cart is empty. Form not submitted.');
+  }
+};
+
 
   return (
     <div className="max-w-md mx-auto">
@@ -98,4 +120,4 @@ const InquiryForm = () => {
   );
 };
 
-export default InquiryForm;
+export default InquiryForm

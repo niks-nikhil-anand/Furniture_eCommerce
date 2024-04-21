@@ -18,9 +18,9 @@ const inquirylistSchema = new mongoose.Schema({
     comments: {
         type: String
     },
-    products: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Product'
+    name: [{
+        type: string,
+       
     }]
 }, { timestamps: true });
 

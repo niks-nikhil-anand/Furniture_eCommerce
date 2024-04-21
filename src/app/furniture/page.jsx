@@ -1,5 +1,6 @@
 
-import Card from '@/components/Test'
+
+import Card from '@/components/FurniturePage'
 import React from 'react'
 
 const page = () => {
