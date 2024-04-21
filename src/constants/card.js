@@ -2,50 +2,50 @@ export const products = [
   {
     "id": 0,
     "slug": "macbook",
-    "image": "https://images.unsplash.com/photo-1560448204-603b3fc33ddc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTR8fGZ1cm5pdHVyZXxlbnwwfDB8MHx8fDA%3D",
-    "title": "Macbook",
+    "image": "https://www.royalzig.com/uploads/cache/cache-aurace-italian-classical-style-bedroom-set-(1).jfif",
+    "title": "Aurace Italian Classical Style Bedroom Set ",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, debitis?",
-    "tags": ["Macbook", "Apple"]
+    "tags": ["Luxury", "Bed"]
   },
   {
     "id": 1,
     "slug": "longitudinal-sports",
-    "image": "https://images.unsplash.com/photo-1560184897-67f4a3f9a7fa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fGZ1cm5pdHVyZXxlbnwwfDB8MHx8fDA%3D",
-    "title": "Longitudinal Sports",
+    "image": "https://www.royalzig.com/uploads/cache/cache-royal-dining-table-classic-italian-design---bangalore--(2).jpg",
+    "title": "Royal Dining Table Classic Italian Design",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, debitis?",
-    "tags": ["Medical", "Sports"]
+    "tags": ["Luxury", "Dining Set"]
   },
   {
     "id": 2,
     "slug": "artificial-intelligence",
-    "image": "https://images.unsplash.com/photo-1618543005334-b0904ecd4441?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Njd8fGZ1cm5pdHVyZXxlbnwwfDB8MHx8fDA%3D",
-    "title": "Artificial Intelligence",
+    "image": "https://www.royalzig.com/uploads/cache/cache-Royal-Dining-set-furniture-design-2023-online-in-inida-1.jpg",
+    "title": "Royal Dining set ",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, debitis?",
-    "tags": ["Coffee", "Technology"]
+    "tags": ["Luxury", "Dining Set"]
   },
   {
     "id": 3,
     "slug": "baseball-storage-move",
-    "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NzJ8fGZ1cm5pdHVyZXxlbnwwfDB8MHx8fDA%3D",
-    "title": "Baseball Storage Move",
+    "image": "https://www.royalzig.com/uploads/cache/cache-Handerson-European-Style-Hand-Carved-Bedroom-Set.jpg",
+    "title": "Henderson European Style Hand Carved Bedroom Set",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, debitis?",
-    "tags": ["Storage", "Sports"]
+    "tags": ["Bed", "Luxury"]
   },
   {
     "id": 4,
     "slug": "collagen-index-network",
-    "image": "https://images.unsplash.com/photo-1489171078254-c3365d6e359f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nzh8fGZ1cm5pdHVyZXxlbnwwfDB8MHx8fDA%3D",
-    "title": "Collagen Index Network",
+    "image": "https://www.royalzig.com/uploads/cache/cache-Gorgeous-Antique-French-Style-Bathroom-Vanity-with-Mirror-Frame-1.jpg",
+    "title": "Gorgeous Antique French Style Bathroom Vanity with Mirror Frame",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, debitis?",
-    "tags": ["Cosmetics", "Beauty"]
+    "tags": ["Antique", "Vanity"]
   },
   {
     "id": 5,
     "slug": "longitudinal-robot",
-    "image": "https://plus.unsplash.com/premium_photo-1684338795288-097525d127f0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGZ1cm5pdHVyZXxlbnwwfDB8MHx8fDA%3D",
-    "title": "Longitudinal Robot",
+    "image": "https://www.royalzig.com/uploads/2020/02/Elizabeth-Antique-Style-Teak-Wood-Office-Table-2.jpg",
+    "title": "Home Office Table",
     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi, debitis?",
-    "tags": ["Robots", "Technology"]
+    "tags": ["Tables", "Antique"]
   },
   ]
   

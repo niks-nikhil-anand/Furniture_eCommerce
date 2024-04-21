@@ -1,16 +1,14 @@
-import { ChevronRight } from 'lucide-react'
 import React from 'react'
-import bg from "../../public/bg.jpg"
 
 export function Footer() {
   return (
-    <footer className="w-full pb-2 text-white pt-[3rem] shadow-lg	
+    <footer className="w-full pb-2 text-white pt-[3rem] shadow-lg	opacity-75
     bg-[url('../../public/bg.jpg')]
     "
     >
       <div className="mx-auto flex max-w-6xl flex-col items-start mr-[3rem] md:flex-row justify-center ">
        
-        <div className="mt-8 grid grid-cols-2 gap-6 md:mt-0 lg:w-3/4 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-2 gap-6 md:mt-0 lg:w-3/4 lg:grid-cols-3 ">
           {Array.from({ length: 2 }).map((_, i) => (
             <div key={i} className="mb-8 lg:mb-0">
               <p className="mb-6 text-lg font-semibold  ">Quicks Links</p>

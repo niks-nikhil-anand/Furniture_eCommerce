@@ -1,10 +1,10 @@
 const nextConfig = {
   images: {
-    domains: ['images.unsplash.com', 'images.wiloke.com', 'plugins.wiloke.com', 'plus.unsplash.com', 'via.placeholder.com'],
+    domains: ['images.unsplash.com', 'images.wiloke.com', 'plugins.wiloke.com', 'plus.unsplash.com', 'via.placeholder.com' , "www.royalzig.com"],
   },
   reactStrictMode: true,
   env: {
-    domain: 'http://localhost:3000/',
+    domain: 'https://theroyal-niks-nikhil-anands-projects.vercel.app/',
   },
 };
 
