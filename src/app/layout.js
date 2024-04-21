@@ -8,7 +8,7 @@ import { CartProvider } from "../context/CartContext.js";
 import CartIcon from "@/components/fixedCart";
 import { usePathname } from "next/navigation";
 import { AdminFooter } from "@/components/AdminFooter";
-import MiniDrawer from "@/components/AdminNavbar";
+import AdminNavbar from "@/components/AdminNavbar";
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -27,8 +27,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         {
           pathName !=='/admin/dashboard'?<ExampleNavbarTwo />
-        : <MiniDrawer/>
-        }
+        : <AdminNavbar/> }
         <CartProvider> 
           {children}
           <CartIcon/>
