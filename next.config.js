@@ -4,7 +4,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   env: {
-    domain: 'https://theroyal-niks-nikhil-anands-projects.vercel.app/',
+    domain: 'http://localhost:3000/',
   },
 };
 

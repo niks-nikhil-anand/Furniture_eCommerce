@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const inquirylistSchema = new mongoose.Schema({
+const inquirySchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -12,18 +12,26 @@ const inquirylistSchema = new mongoose.Schema({
         trim: true
     },
     phone: {
-        type: Number,
+        type: String,
         trim: true
     },
     comments: {
         type: String
     },
-    product: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Product'
-    }]
+    cartData: {
+        type: [{
+            productId: {
+                type: mongoose.Schema.Types.ObjectId,
+                ref: 'Product'
+            },
+            quantity: {
+                type: Number,
+                default: 1
+            }
+        }]
+    }
 }, { timestamps: true });
 
-const Inquirylist = mongoose.models.Inquirylist || mongoose.model('Inquirylist', inquirylistSchema);
+const Inquiry = mongoose.models.Inquiry || mongoose.model('Inquiry', inquirySchema);
 
-export default Inquirylist;
+export default Inquiry;

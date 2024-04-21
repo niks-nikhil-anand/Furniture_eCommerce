@@ -25,6 +25,7 @@ const InquiryForm = () => {
     if (cart.length > 0 && formData.name && formData.email && formData.phone) {
       const updatedFormData = { ...formData, cartData: cart };
       console.log('Form submitted:', updatedFormData);
+      console.log(cart)
 
       const apiEndpoint = `${process.env.domain}api/inquiry`;
       const res = await fetch(apiEndpoint, {

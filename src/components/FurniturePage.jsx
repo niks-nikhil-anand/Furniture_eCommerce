@@ -89,7 +89,7 @@ export function Card() {
                   transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   
                 >
-                 Add to Inquiry List
+                 + Inquiry List
                 </motion.button>
               </div>
             </motion.div>
