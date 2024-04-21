@@ -7,8 +7,8 @@ import { CartProvider } from "../context/CartContext.js";
 
 import CartIcon from "@/components/fixedCart";
 import { usePathname } from "next/navigation";
-import { AdminFooter } from "@/components/AdminFooter";
-import AdminNavbar from "@/components/AdminNavbar";
+import  AdminFooter  from "../components/AdminFooter";
+import AdminNavbar from "../components/AdminNavbar";
 
 
 const inter = Inter({ subsets: ["latin"] });
