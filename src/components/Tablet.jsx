@@ -19,7 +19,7 @@ export function HeroScrollDemo() {
         }
       >
         <Image
-          src={"https://images.unsplash.com/photo-1514988081842-feeaeac260e3?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVybml0dXJlJTIwc3RvcmV8ZW58MHx8MHx8fDA%3D"}
+          src={"https://images.unsplash.com/photo-1618411624931-e2a2fba5a826?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fGFudGlxdWUlMjBmdXJuaXR1cmV8ZW58MHx8MHx8fDA%3D"}
           alt="hero"
           height={720}
           width={1400}
