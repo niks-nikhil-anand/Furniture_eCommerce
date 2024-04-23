@@ -31,38 +31,10 @@ export function Footer() {
               </div>
             </div>
           </div>
+          
           <div className="w-full p-6 md:w-1/2 lg:w-2/12">
             <div className="h-full">
-              <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
-                Company
-              </h3>
-              <ul>
-                <li className="mb-4">
-                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="#">
-                    Features
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="#">
-                    Pricing
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="#">
-                    Affiliate Program
-                  </a>
-                </li>
-                <li>
-                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="#">
-                    Press Kit
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="w-full p-6 md:w-1/2 lg:w-2/12">
-            <div className="h-full">
-              <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
+              <h3 className="tracking-px mb-9  text-2xl font-semibold uppercase text-gray-500">
                 Contact Us
               </h3>
               <ul>
@@ -72,17 +44,17 @@ export function Footer() {
                     </Link>
                 </li>
                 <li className="mb-4">
-                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="#">
+                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="/contact">
                     Help
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="#">
+                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="/contact">
                     Contact Us
                   </a>
                 </li>
                 <li>
-                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="#">
+                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="/contact">
                     Customer Support
                   </a>
                 </li>
@@ -91,13 +63,13 @@ export function Footer() {
           </div>
           <div className="w-full p-6 md:w-1/2 lg:w-3/12">
             <div className="h-full">
-              <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
+              <h3 className="tracking-px mb-9   text-2xl  font-semibold uppercase text-gray-500">
                 Legals
               </h3>
               <ul>
                 <li className="mb-4">
                   <Link className=" text-base font-medium text-gray-900 hover:text-gray-700"href={'/termsAndCondition'}>
-                    Terms &amp; Conditions
+                    Terms and Conditions
                     </Link>
                 </li>
                 <li className="mb-4">
@@ -105,11 +77,7 @@ export function Footer() {
                     Privacy Policy
                     </Link>
                 </li>
-                <li>
-                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="#">
-                    Licensing
-                  </a>
-                </li>
+               
               </ul>
             </div>
           </div>
