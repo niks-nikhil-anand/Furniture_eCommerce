@@ -43,7 +43,7 @@ export function Card() {
 </span> Product</h1>
 
 </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ml-4">
         
         {products && products.map((product) => (
           <Link href={'/furniture/'+ product.slug } key={product.id}>
