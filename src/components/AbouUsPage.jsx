@@ -72,8 +72,9 @@ export function AboutUsPage() {
         {/* Hiring Banner */}
         <div className="flex flex-col items-center gap-x-4 gap-y-4 py-16 md:flex-row border-t-[3px] border-t-black ">
           <div className="space-y-6">
-            <p className="text-sm font-semibold md:text-base">Join our team &rarr;</p>
-            <p className="text-3xl font-bold md:text-4xl">We&apos;re just getting started</p>
+            <p className="text-sm font-semibold md:text-base">The Royal Oak &rarr;</p>
+            <p className="text-3xl font-bold md:text-4xl">History in every nook and cranny
+</p>
             <p className="text-base text-gray-600 md:text-lg">
             All carving, molding, turning, inlay, and cane weaving is done entirely by hand by skilled artisans the way it has been for centuries. The artistry and workmanship involved in our process, coupled with the high quality materials we use, ensure that our furniture is handsome, durable, and features fine details found only in the best furniture.
             </p>
@@ -105,8 +106,9 @@ export function AboutUsPage() {
             />
           </div>
           <div className="space-y-6">
-            <p className="text-sm font-semibold md:text-base">Join our team &rarr;</p>
-            <p className="text-3xl font-bold md:text-4xl">We&apos;re just getting started</p>
+            <p className="text-sm font-semibold md:text-base">The Royal Oak &rarr;</p>
+            <p className="text-3xl font-bold md:text-4xl">Elevate Your Space with Class
+</p>
             <p className="text-base text-gray-600 md:text-lg">
             All carving, molding, turning, inlay, and cane weaving is done entirely by hand by skilled artisans the way it has been for centuries. The artistry and workmanship involved in our process, coupled with the high quality materials we use, ensure that our furniture is handsome, durable, and features fine details found only in the best furniture.
             </p>

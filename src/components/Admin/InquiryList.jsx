@@ -1,21 +1,24 @@
+"use client"
 import * as React from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TablePagination, Button } from '@mui/material';
-import { useEffect, useState } from 'react';
-import axios from 'axios';
 
 const InquiryTable = () => {
-  const [inquiries, setInquiries] = useState([]);
-  const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [inquiries, setInquiries] = React.useState([]);
+  const [page, setPage] = React.useState(0);
+  const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
-  useEffect(() => {
+  React.useEffect(() => {
     fetchInquiries();
   }, []);
 
   const fetchInquiries = async () => {
     try {
-      const response = await axios.get('your-backend-url/inquiries');
-      setInquiries(response.data);
+      const response = await fetch('your-backend-url/inquiries');
+      if (!response.ok) {
+        throw new Error('Failed to fetch inquiries');
+      }
+      const data = await response.json();
+      setInquiries(data);
     } catch (error) {
       console.error('Error fetching inquiries:', error);
     }

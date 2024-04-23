@@ -21,15 +21,22 @@ export default function ProductForm() {
     }));
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Send formData to your backend using fetch or your preferred method
-    console.log(formData);
-    // Example: fetch('your-backend-url/products', { method: 'POST', body: JSON.stringify(formData) });
+    
+    const apiEndpoint = `${process.env.domain}api/addProduct`;
+    const res = await fetch(apiEndpoint, {
+      method: 'POST',
+      body: JSON.stringify(formData),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
   };
 
   return (
     <Container>
+      <h1 className='text-2xl align-center'>Add Products - The Royal Oak</h1>
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>
@@ -110,7 +117,7 @@ export default function ProductForm() {
           </Grid>
           <Grid item xs={12}>
             <Button type="submit" variant="contained" color="primary">
-              Submit
+              Add Products
             </Button>
           </Grid>
         </Grid>

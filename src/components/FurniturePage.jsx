@@ -2,9 +2,10 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { ArrowUpRight } from 'lucide-react';
 import { motion } from "framer-motion";
-import {CartContext} from '../context/CartContext'
+
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 async function getData() {
   const apiEndpoint = `${process.env.domain}api/furniture`;
@@ -24,7 +25,7 @@ async function getData() {
 }
 
 export function Card() {
-    const {addToCart } = useContext(CartContext);
+    
   const [products, setProducts] = useState([]);
   useEffect(() => {
     async function fetchData() {
@@ -39,22 +40,20 @@ export function Card() {
     fetchData();
   }, []);
 
-  const handleAddToCart = (product) => {
-    addToCart(product);
-    
-  };
+  
   
 
   return (
     <div className="container mx-auto px-4 mt-[4rem] mb-[3rem] lg:px-[5rem] lg:mb-[6rem]">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
       {products && products.map((product) => (
-         
-            <motion.div
+         <Link href={'/furniture/'+ product.slug }>
+          <motion.div
             key={product.id}
               className="w-[300px] rounded-md border bg-[#FFEBC4] cursor-pointer"
               whileHover={{ scale: 1.1 }}
             >
+              
               <Image
                 src={product.imageUrl}
                 alt={product.title}
@@ -80,19 +79,11 @@ export function Card() {
                    
                   </span>
                 </div>
-                <motion.button
-                  type="button"
-                    onClick={() => handleAddToCart(product)}
-                  className="mt-4 w-full rounded-sm bg-black px-1 py-1.5 text-sm font-semibold  text-white shadow-sm hover:bg-black/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black cursor-pointer"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.6 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
-                  
-                >
-                 + Inquiry List
-                </motion.button>
+               
               </div>
             </motion.div>
+         </Link>
+           
           
         ))}
       </div>

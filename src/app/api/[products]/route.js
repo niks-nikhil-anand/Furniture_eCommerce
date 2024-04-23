@@ -6,12 +6,14 @@ import Product from "@/models/productModels";
 async function connectToDB() {
   await connectDB();
 }
-
-export async function GET(req) {
+ 
+export const GET = async (request, { params }) => {
+    const { products: slug } = params;
+    console.log(slug);
   try {
     // Connect to MongoDB
     await connectToDB();
-    const result = await Product.find({ category: "furniture" });
+    const result = await Product.find({ slug: slug });
 
     return NextResponse.json({
       "result" : result
@@ -27,3 +29,4 @@ export async function GET(req) {
     });
   }
 }
+

@@ -23,6 +23,7 @@ import Dashboard from '@/components/Dashboard';
 import AddProducts from '@/components/AddProducts';
 import AllProducts from '@/components/Admin/AllProducts';
 import AddYourProducts from '@/components/Admin/AddYourProducts';
+import InquiryTable from '@/components/Admin/InquiryList';
 const drawerWidth = 240;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
@@ -96,6 +97,9 @@ export default function PersistentDrawerRight() {
         break;
       case 'All-Products':
         setSelectedComponent(<AllProducts />);
+        break;
+      case 'Inquiry-List':
+        setSelectedComponent(<InquiryTable />);
         break;
     
       // Add more cases for other sidebar items as needed

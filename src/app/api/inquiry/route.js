@@ -8,7 +8,7 @@ async function connectToDB() {
 
 export async function POST(req) {
   const body = await req.json();
-  console.log(` apibody : ${body}`)
+ 
  
   try {
     await connectToDB();

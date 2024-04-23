@@ -10,7 +10,7 @@ const InquiryForm = () => {
     comments: '',
   });
   const { cart } = useContext(CartContext);
-
+  const [isSubmitted, setIsSubmitted] = useState(false);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -23,9 +23,7 @@ const InquiryForm = () => {
     e.preventDefault();
 
     if (cart.length > 0 && formData.name && formData.email && formData.phone) {
-      const updatedFormData = { ...formData, cartData: cart };
-      console.log('Form submitted:', updatedFormData);
-      console.log(cart)
+      const updatedFormData = { ...formData, cartData: cart };     
 
       const apiEndpoint = `${process.env.domain}api/inquiry`;
       const res = await fetch(apiEndpoint, {
@@ -36,7 +34,7 @@ const InquiryForm = () => {
         },
       });
 
-      console.log('Response:', res);
+      
 
       // Reset form data after successful submission
       setFormData({
@@ -45,6 +43,7 @@ const InquiryForm = () => {
         phone: '',
         comments: '',
       });
+           setIsSubmitted(true);
     } else {
       console.log('Cart is empty or form fields are empty.');
     }
@@ -65,11 +64,11 @@ const InquiryForm = () => {
             name="name"
             value={formData.name}
             onChange={handleChange}
-            className="mt-1 block w-full h-[3rem] border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-4"
+            className="mt-1 block w-full h-[3rem] border-[2px]  rounded-md  border-black m:text-sm p-4"
           />
         </div>
         <div>
-          <label htmlFor="email" className="block font-medium text-gray-700">
+          <label htmlFor="email" className="block font-medium text-black-700">
             Email
           </label>
           <input
@@ -78,12 +77,12 @@ const InquiryForm = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
-            className="mt-1 block w-full  h-[3rem] border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-4"
+            className="mt-1 block w-full  h-[3rem] border-[2px] border-black rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-4"
           />
         </div>
         <div className="flex flex-col sm:flex-row sm:space-x-4">
           <div className="w-full sm:w-1/2">
-            <label htmlFor="phone" className="block font-medium text-gray-700">
+            <label htmlFor="phone" className="block font-medium text-black-700">
               Phone
             </label>
             <input
@@ -92,7 +91,7 @@ const InquiryForm = () => {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="mt-1 block w-full  h-[3rem] border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-4"
+              className="mt-1 block w-full  h-[3rem]  border-[2px] border-black rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-4"
             />
           </div>
           <div className="w-full sm:w-1/2">
@@ -105,15 +104,15 @@ const InquiryForm = () => {
               value={formData.comments}
               onChange={handleChange}
               rows={4}
-              className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-4"
+              className="mt-1 block w-full  border-[2px] border-black rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm p-4"
             />
           </div>
         </div>
         <button
           type="submit"
-          className="rounded-md border w-full border-[#82714F] px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+          className="rounded-md border w-full bg-[#e3a832]  px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
         >
-          Send Inquiry List
+          {isSubmitted ? 'Inquiry is Submitted' : 'Send Inquiry List'}
         </button>
       </form>
     </div>
