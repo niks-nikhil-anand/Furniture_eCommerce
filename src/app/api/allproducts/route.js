@@ -2,29 +2,27 @@ import connectDB from "@/lib/connectDB";
 import { NextResponse } from "next/server";
 import Product from "@/models/productModels";
 
+// Function to connect to MongoDB
 async function connectToDB() {
   await connectDB();
 }
 
-export async function POST(req) {
-  const body = await req.json();
- 
- 
+export async function GET(req) {
   try {
+    // Connect to MongoDB
     await connectToDB();
-    const result = await Product.create(body);
+    const result = await Product.find();
 
-    console.log("Added successflly")
-    console.log(body)
     return NextResponse.json({
-      result: result,
-      msg: "Added successfully",
-      status: 201
+      "result" : result
+    }, {
+      status: 200
     });
   } catch (error) {
     console.log(error)
-    return NextResponse.json({ 
-      msg: "something went wrong",
+    return NextResponse.json({
+      msg: "something went wrong"
+    }, {
       status: 400
     });
   }

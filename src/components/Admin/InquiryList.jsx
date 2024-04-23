@@ -1,73 +1,76 @@
-"use client"
-import * as React from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TablePagination, Button } from '@mui/material';
+import React, { useContext, useState, useEffect } from 'react';
 
-const InquiryTable = () => {
-  const [inquiries, setInquiries] = React.useState([]);
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
-  React.useEffect(() => {
-    fetchInquiries();
+async function getData() {
+  const apiEndpoint = `${process.env.domain}api/inquiryList`;
+
+  const res = await fetch(`${apiEndpoint}`, {
+   method : 'GET',
+   headers:{
+    'Content-Type':'application/json',
+   }
+  });
+
+  if (!res.ok) {
+    console.log(apiEndpoint)
+    throw new Error("Failed to fetch data");
+  }
+  return res.json();
+}
+
+const AllProducts = () => {
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const data = await getData(); 
+        setProducts(data.result); 
+       
+        
+        
+      } catch (error) {
+        console.error("Failed to fetch data:", error);
+      }
+    }
+    fetchData();
   }, []);
 
-  const fetchInquiries = async () => {
-    try {
-      const response = await fetch('your-backend-url/inquiries');
-      if (!response.ok) {
-        throw new Error('Failed to fetch inquiries');
-      }
-      const data = await response.json();
-      setInquiries(data);
-    } catch (error) {
-      console.error('Error fetching inquiries:', error);
-    }
-  };
-
-  const handlePageChange = (event, newPage) => {
-    setPage(newPage);
-  };
-
-  const handleRowsPerPageChange = (event) => {
-    setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(0);
-  };
+  useEffect(() => {
+    console.log(products); // Log updated products whenever it changes
+  }, [products]);
 
   return (
-    <TableContainer component={Paper}>
-      <Table>
-        <TableHead>
-          <TableRow>
-            <TableCell>Name</TableCell>
-            <TableCell>Email</TableCell>
-            <TableCell>Phone</TableCell>
-            <TableCell>Comments</TableCell>
-            <TableCell>Cart Data</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          {inquiries.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((inquiry) => (
-            <TableRow key={inquiry._id}>
-              <TableCell>{inquiry.name}</TableCell>
-              <TableCell>{inquiry.email}</TableCell>
-              <TableCell>{inquiry.phone}</TableCell>
-              <TableCell>{inquiry.comments}</TableCell>
-              <TableCell>{JSON.stringify(inquiry.cartData)}</TableCell>
-            </TableRow>
+    <div className="overflow-x-auto">
+      <table className="min-w-full divide-y divide-gray-200">
+        <thead className="bg-gray-50">
+          <tr>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Phone</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Comments</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+          </tr>
+        </thead>
+        <tbody className="bg-white divide-y divide-gray-200">
+          {products && products.map((product) => (
+            <tr key={product._id}>
+              <td className="px-6 py-4 whitespace-nowrap">{product.name}</td>
+              <td className="px-6 py-4 whitespace-nowrap">{product.email}</td>
+              <td className="px-6 py-4 whitespace-nowrap">{product.phone}</td>
+              <td className="px-6 py-4 whitespace-nowrap">{product.comments}</td>
+              <td className="px-6 py-4 whitespace-nowrap">
+                {/* Add buttons for edit and delete actions */}
+                <button className="text-indigo-600 hover:text-indigo-900">Edit</button>
+                <button className="text-red-600 hover:text-red-900 ml-2">Delete</button>
+              </td>
+            </tr>
           ))}
-        </TableBody>
-      </Table>
-      <TablePagination
-        rowsPerPageOptions={[5, 10, 25]}
-        component="div"
-        count={inquiries.length}
-        rowsPerPage={rowsPerPage}
-        page={page}
-        onPageChange={handlePageChange}
-        onRowsPerPageChange={handleRowsPerPageChange}
-      />
-    </TableContainer>
+        </tbody>
+      </table>
+    </div>
   );
 };
 
-export default InquiryTable;
+
+
+export default AllProducts;

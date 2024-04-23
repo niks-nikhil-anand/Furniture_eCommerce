@@ -33,11 +33,11 @@ const PrivacyPolicy = () => {
           </p>
           
           <p className="mb-2">
-            Affiliate means an entity that controls, is controlled by, or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest, or other securities entitled to vote for the election of directors or other managing authority.
+            Affiliate means an entity that controls, is controlled by, or is under common control with a party, where &quot;control&quot; means ownership of 50% or more of the shares, equity interest, or other securities entitled to vote for the election of directors or other managing authority.
           </p>
           
           <p className="mb-2">
-            Company (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to The Royal Oak, 1, Avas Vikas Colony, Betia Hata, Gorakhpur.
+            Company (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Agreement) refers to The Royal Oak, 1, Avas Vikas Colony, Betia Hata, Gorakhpur.
           </p>
           
           <p className="mb-2">
@@ -83,7 +83,7 @@ const PrivacyPolicy = () => {
           </li>
         </ul>
 
-        <p className="mb-4">Cookies can be "Persistent" or "Session" Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser. You can learn more about cookies on TermsFeed website article.</p>
+        <p className="mb-4">Cookies can be &quot;Persistent&quot; or &quot;Session&quot; Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser. You can learn more about cookies on TermsFeed website article.</p>
 
         <p className="mb-4">We use both Session and Persistent Cookies for the purposes set out below:</p>
 
@@ -119,7 +119,7 @@ const PrivacyPolicy = () => {
       <div className="bg-white p-6 shadow-lg rounded-lg">
         <h2 className="text-3xl font-bold mb-4">Transfer of Your Personal Data</h2>
         <p className="mb-4">
-          Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country, or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.
+          Your information, including Personal Data, is processed at the Company operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country, or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.
         </p>
         <p className="mb-4">
           Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.

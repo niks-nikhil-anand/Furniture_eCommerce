@@ -4,7 +4,9 @@ const nextConfig = {
   },
   reactStrictMode: true,
   env: {
-    domain: 'http://localhost:3000/',
+    domain: 'https://theroyal-niks-nikhil-anands-projects.vercel.app/',
+    NEXTAUTH_URL:'http://localhost:3000/api/auth' ,
+    NEXTAUTH_SECRET: 'vjvjvjvbkbkkjggug',
   },
 };
 

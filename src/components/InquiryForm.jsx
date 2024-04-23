@@ -1,8 +1,15 @@
 "use client"
 import React, { useState, useContext } from 'react';
 import { CartContext } from '../context/CartContext';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const InquiryForm = () => {
+  const notify = () => { // corrected syntax here
+    toast.success("Form Submitted !", {
+      position: "bottom-right"
+    });
+  };
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -111,9 +118,11 @@ const InquiryForm = () => {
         <button
           type="submit"
           className="rounded-md border w-full bg-[#e3a832]  px-3 py-2 text-sm font-semibold text-black shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
+          onClick={notify}
         >
           {isSubmitted ? 'Inquiry is Submitted' : 'Send Inquiry List'}
         </button>
+        <ToastContainer />
       </form>
     </div>
   );

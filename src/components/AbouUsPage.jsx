@@ -8,19 +8,6 @@ import about3 from '../../public/about3.jpg'
 
 
 
-const locations = [
-  
-  {
-    title:' Uttar Pradesh India',
-    timings: 'Mon-Sat 9am to 5pm.',
-    address: 'The Royal Oak  1, Avas Vikas Colony, Betia Hata, Gorakhpur 273001'
-   
-    
-    
-  },
-  
-]
-
 
 
 export function AboutUsPage() {
@@ -44,7 +31,7 @@ export function AboutUsPage() {
             />
           </div>
           <div className="space-y-6 ">
-            <p className="text-sm font-semibold md:text-base">The Royal Oak &rarr;</p>
+            <p className="text-sm font-semibold md:text-base">The Royal Oak </p>
             <p className="text-3xl font-bold md:text-4xl">History in every nook and cranny
 </p>
             <p className="text-base text-gray-600 md:text-lg">
@@ -65,7 +52,7 @@ export function AboutUsPage() {
         {/* Hiring Banner */}
         <div className="flex flex-col items-center gap-x-4 gap-y-4 py-16 md:flex-row border-t-[3px] border-t-black ">
           <div className="space-y-6">
-            <p className="text-sm font-semibold md:text-base">The Royal Oak &rarr;</p>
+            <p className="text-sm font-semibold md:text-base">The Royal Oak </p>
             <p className="text-3xl font-bold md:text-4xl">History in every nook and cranny
 </p>
             <p className="text-base text-gray-600 md:text-lg">
@@ -99,11 +86,11 @@ export function AboutUsPage() {
             />
           </div>
           <div className="space-y-6">
-            <p className="text-sm font-semibold md:text-base">The Royal Oak &rarr;</p>
+            <p className="text-sm font-semibold md:text-base">The Royal Oak</p>
             <p className="text-3xl font-bold md:text-4xl">Elevate Your Space with Class
 </p>
             <p className="text-base text-gray-600 md:text-lg">
-            In addition to our curated collection, we also specialize in custom furniture, allowing you to bring your unique vision to life. Whether you're looking to add a touch of historical charm to your home or seeking a statement piece for your space, The Royal Oak is your destination for timeless elegance and impeccable craftsmanship in antique furniture.
+            In addition to our curated collection, we also specialize in custom furniture, allowing you to bring your unique vision to life. Whether you are looking to add a touch of historical charm to your home or seeking a statement piece for your space, The Royal Oak is your destination for timeless elegance and impeccable craftsmanship in antique furniture.
             </p>
             <button
               type="button"

@@ -6,7 +6,7 @@ const TermsAndConditions = () => {
       <h1 className="text-3xl font-bold mb-4">Terms and Conditions</h1>
       <p>Welcome to The Royal Oak!</p>
       <p className="mb-4">
-        These terms and conditions outline the rules and regulations for the use of The Royal Oak's Website, located at{' '}
+        These terms and conditions outline the rules and regulations for the use of The Royal Oak&apos;s Website, located at{' '}
         <a href="https://theroyaloak.com/" className="text-blue-500 hover:underline">
           https://theroyaloak.com/
         </a>
@@ -18,9 +18,9 @@ const TermsAndConditions = () => {
       </p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Cookies</h2>
-      <p>We employ the use of cookies. By accessing The Royal Oak, you agree to use cookies in agreement with the The Royal Oak's Privacy Policy.</p>
+      <p>We employ the use of cookies. By accessing The Royal Oak, you agree to use cookies in agreement with the The Royal Oak&apos;s Privacy Policy.</p>
       <p>
-        Most interactive websites use cookies to let us retrieve the user's details for each visit. Cookies are used by
+        Most interactive websites use cookies to let us retrieve the user&apos;s details for each visit. Cookies are used by
         our website to enable the functionality of certain areas to make it easier for people visiting our website. Some
         of our affiliate/advertising partners may also use cookies.
       </p>
@@ -49,7 +49,7 @@ const TermsAndConditions = () => {
         <li>Online directory distributors may link to our Website in the same manner as they hyperlink to the Websites of other listed businesses; and</li>
         <li>System wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.</li>
       </ul>
-      <p>These organizations may link to our home page, to publications or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party's site.</p>
+      <p>These organizations may link to our home page, to publications or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party&apos;s site.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">iFrames</h2>
       <p>Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.</p>
@@ -58,7 +58,7 @@ const TermsAndConditions = () => {
       <p>We shall not be hold responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Reservation of Rights</h2>
-      <p>We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amend these terms and conditions and it's linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.</p>
+      <p>We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amend these terms and conditions and it&apos;s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.</p>
 
       <h2 className="text-2xl font-bold mt-8 mb-4">Removal of links from our website</h2>
       <p>If you find any link on our Website that is offensive for any reason, you are free to contact and inform us any moment. We will consider requests to remove links but we are not obligated to or so or to respond to you directly.</p>

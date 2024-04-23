@@ -1,8 +1,15 @@
-"use client"
 import * as React from 'react';
 import { TextField, Button, Container, Grid, Select, MenuItem, FormControl, InputLabel } from '@mui/material';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function ProductForm() {
+  const notify = () => {
+    toast.success("Form Submitted !", {
+      position: "bottom-right"
+    });
+  };
+
   const [formData, setFormData] = React.useState({
     title: '',
     description: '',
@@ -12,6 +19,7 @@ export default function ProductForm() {
     subcategory: '',
     slug: '',
   });
+  const [isSubmitted, setIsSubmitted] = React.useState(false);
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -32,6 +40,21 @@ export default function ProductForm() {
         'Content-Type': 'application/json',
       },
     });
+    if (res.ok) {
+      setFormData({
+        title: '',
+        description: '',
+        content: '',
+        imageUrl: '',
+        category: '',
+        subcategory: '',
+        slug: '',
+      });
+      setIsSubmitted(true);
+      notify(); // Moved notify() here for successful submission
+    } else {
+      console.log('Cart is empty or form fields are empty.');
+    }
   };
 
   return (
@@ -119,6 +142,7 @@ export default function ProductForm() {
             <Button type="submit" variant="contained" color="primary">
               Add Products
             </Button>
+            <ToastContainer />
           </Grid>
         </Grid>
       </form>

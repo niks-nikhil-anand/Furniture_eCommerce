@@ -3,6 +3,7 @@ import { Star} from 'lucide-react';
 import React, { useState, useEffect , useContext} from 'react';
 import {CartContext} from '../../../context/CartContext'
 import { motion } from "framer-motion";
+import Image from 'next/image';
 
 async function getData(params) {
   const apiEndpoint = `${process.env.domain}api/${params.slug}`;
@@ -50,10 +51,12 @@ const ProductOverviewTwo = ({ params }) => {
     <section className="overflow-hidden">
       <div className="mx-auto max-w-5xl px-5 py-24">
         <div className="mx-auto flex flex-wrap items-center lg:w-4/5">
-          <img
+          <Image
             alt={products.length > 0 ? products[0].slug : ''}
             className="h-64 w-full  object-cover lg:h-96 lg:w-1/2 rounded-lg rounded-tr-[4rem]"
             src={products.length > 0 ? products[0].imageUrl : ''}
+            height={400}
+            width={400}
           />
           <div className="mt-6 w-full lg:mt-0 lg:w-1/2 lg:pl-10">
             <h2 className="text-sm font-semibold tracking-widest text-gray-500">{products.length > 0 ? products[0].category : ''}</h2>

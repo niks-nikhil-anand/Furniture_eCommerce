@@ -1,84 +1,70 @@
-"use client"
-import * as React from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, TablePagination, Button } from '@mui/material';
+import React, { useContext, useState, useEffect } from 'react';
+
+
+async function getData() {
+  const apiEndpoint = `${process.env.domain}api/allproducts`;
+
+  const res = await fetch(`${apiEndpoint}`, {
+   method : 'GET',
+   headers:{
+    'Content-Type':'application/json',
+   }
+  });
+
+  if (!res.ok) {
+    console.log(apiEndpoint)
+    throw new Error("Failed to fetch data");
+  }
+  return res.json();
+}
 
 const AllProducts = () => {
-  const [products, setProducts] = React.useState([]);
-  const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(5);
-
-  React.useEffect(() => {
-    fetchProducts();
+  const [products, setProducts] = useState([]);
+  useEffect(() => {
+    async function fetchData() {
+      try {
+        const data = await getData(); 
+        setProducts(data.result); 
+        
+      } catch (error) {
+        console.error("Failed to fetch data:", error);
+      }
+    }
+    fetchData();
   }, []);
 
-  const fetchProducts = async () => {
-    try {
-      const response = await fetch('your-backend-url/products');
-      if (!response.ok) {
-        throw new Error('Failed to fetch products');
-      }
-      const data = await response.json();
-      setProducts(data);
-    } catch (error) {
-      console.error('Error fetching products:', error);
-    }
-  };
-
-  const handlePageChange = (event, newPage) => {
-    setPage(newPage);
-  };
-
-  const handleRowsPerPageChange = (event) => {
-    setRowsPerPage(parseInt(event.target.value, 10));
-    setPage(0);
-  };
-
   return (
-    <div>
-      <TableContainer component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>Image</TableCell>
-              <TableCell>Title</TableCell>
-              <TableCell>Description</TableCell>
-              <TableCell>Category</TableCell>
-              <TableCell>Actions</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {products.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((product) => (
-              <TableRow key={product._id}>
-                <TableCell>
-                  <img src={product.imageUrl} alt={product.title} style={{ width: 50, height: 50 }} />
-                </TableCell>
-                <TableCell>{product.title}</TableCell>
-                <TableCell>{product.description}</TableCell>
-                <TableCell>{product.category}</TableCell>
-                <TableCell>
-                  <Button variant="outlined" color="primary">
-                    Edit
-                  </Button>
-                  <Button variant="outlined" color="secondary">
-                    Delete
-                  </Button>
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
-      <TablePagination
-        rowsPerPageOptions={[5, 10, 25]}
-        component="div"
-        count={products.length}
-        rowsPerPage={rowsPerPage}
-        page={page}
-        onPageChange={handlePageChange}
-        onRowsPerPageChange={handleRowsPerPageChange}
-      />
+    <div className="overflow-x-auto">
+      <table className="min-w-full divide-y divide-gray-200">
+        <thead className="bg-gray-50">
+          <tr>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Title</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Description</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Category</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Subcategory</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
+          </tr>
+        </thead>
+        <tbody className="bg-white divide-y divide-gray-200">
+          {products && products.map((product) => (
+            <tr key={product._id}>
+              <td className="px-6 py-4 whitespace-nowrap">{product.title}</td>
+              <td className="px-6 py-4 whitespace-nowrap">{product.description}</td>
+              <td className="px-6 py-4 whitespace-nowrap">{product.category}</td>
+              <td className="px-6 py-4 whitespace-nowrap">{product.subcategory}</td>
+              <td className="px-6 py-4 whitespace-nowrap">
+                {/* Add buttons for edit and delete actions */}
+                <button className="text-indigo-600 hover:text-indigo-900">Edit</button>
+                <button className="text-red-600 hover:text-red-900 ml-2">Delete</button>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
+
+
 
 export default AllProducts;
