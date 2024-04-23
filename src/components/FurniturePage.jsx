@@ -28,6 +28,7 @@ export function Card() {
       try {
         const data = await getData(); 
         setProducts(data.result); 
+        console.log(products)
       } catch (error) {
         console.error("Failed to fetch data:", error);
       }
