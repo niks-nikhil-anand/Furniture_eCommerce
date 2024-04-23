@@ -6,6 +6,35 @@ export function Footer() {
     <section className="relative overflow-hidden py-10 bg-[#58A399] shadow-xl">
       <div className="relative z-10 mx-auto max-w-7xl px-4">
         <div className="-m-6 flex flex-wrap">
+        <div className="w-full p-6 md:w-1/2 lg:w-2/12">
+            <div className="h-full">
+              <h3 className="tracking-px mb-9  text-2xl font-semibold uppercase text-gray-500">
+                Quick Links
+              </h3>
+              <ul>
+                <li className="mb-4">
+                  <Link className=" text-base font-medium text-gray-900 hover:text-gray-700"href={'/about'}>
+                    About Us
+                    </Link>
+                </li>
+                <li className="mb-4">
+                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="/contact">
+                    Contact Us
+                  </a>
+                </li>
+                <li className="mb-4">
+                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="/privacyPolicy">
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="/termsAndCondition">
+                    Terms and Condition
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
           <div className="w-full p-6 md:w-1/2 lg:w-5/12">
             <div className="flex h-full flex-col justify-between">
               <div className="mb-4 inline-flex items-center">
@@ -32,55 +61,8 @@ export function Footer() {
             </div>
           </div>
           
-          <div className="w-full p-6 md:w-1/2 lg:w-2/12">
-            <div className="h-full">
-              <h3 className="tracking-px mb-9  text-2xl font-semibold uppercase text-gray-500">
-                Contact Us
-              </h3>
-              <ul>
-                <li className="mb-4">
-                  <Link className=" text-base font-medium text-gray-900 hover:text-gray-700"href={'/about'}>
-                    About Us
-                    </Link>
-                </li>
-                <li className="mb-4">
-                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="/contact">
-                    Help
-                  </a>
-                </li>
-                <li className="mb-4">
-                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="/contact">
-                    Contact Us
-                  </a>
-                </li>
-                <li>
-                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="/contact">
-                    Customer Support
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="w-full p-6 md:w-1/2 lg:w-3/12">
-            <div className="h-full">
-              <h3 className="tracking-px mb-9   text-2xl  font-semibold uppercase text-gray-500">
-                Legals
-              </h3>
-              <ul>
-                <li className="mb-4">
-                  <Link className=" text-base font-medium text-gray-900 hover:text-gray-700"href={'/termsAndCondition'}>
-                    Terms and Conditions
-                    </Link>
-                </li>
-                <li className="mb-4">
-                  <Link className=" text-base font-medium text-gray-900 hover:text-gray-700" href={'/privacyPolicy'}>
-                    Privacy Policy
-                    </Link>
-                </li>
-               
-              </ul>
-            </div>
-          </div>
+         
+          
         </div>
       </div>
     </section>
