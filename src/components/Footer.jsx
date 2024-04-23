@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 
 export function Footer() {
@@ -62,13 +63,13 @@ export function Footer() {
           <div className="w-full p-6 md:w-1/2 lg:w-2/12">
             <div className="h-full">
               <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
-                Support
+                Contact Us
               </h3>
               <ul>
                 <li className="mb-4">
-                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="#">
-                    Account
-                  </a>
+                  <Link className=" text-base font-medium text-gray-900 hover:text-gray-700"href={'/about'}>
+                    About Us
+                    </Link>
                 </li>
                 <li className="mb-4">
                   <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="#">
@@ -95,14 +96,14 @@ export function Footer() {
               </h3>
               <ul>
                 <li className="mb-4">
-                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="#">
+                  <Link className=" text-base font-medium text-gray-900 hover:text-gray-700"href={'/termsAndCondition'}>
                     Terms &amp; Conditions
-                  </a>
+                    </Link>
                 </li>
                 <li className="mb-4">
-                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="#">
+                  <Link className=" text-base font-medium text-gray-900 hover:text-gray-700" href={'/privacyPolicy'}>
                     Privacy Policy
-                  </a>
+                    </Link>
                 </li>
                 <li>
                   <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="#">

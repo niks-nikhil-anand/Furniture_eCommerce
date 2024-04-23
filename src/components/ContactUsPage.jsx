@@ -2,6 +2,7 @@
 
 import Image from 'next/image'
 import React from 'react'
+import contact1 from '../../public/contact1.jpg'
 
 const menuItems = [
   {
@@ -20,20 +21,11 @@ const menuItems = [
 
 const locations = [
   {
-    title: 'Bengaluru office',
+    title: 'Uttar Pardesh , India',
     timings: 'Mon-Sat 9am to 5pm.',
-    address: '100, Electronic City Phase-1, Bengaluru, Karnataka 560100 IN',
+    address: '1, Avas Vikas Colony, Betia Hata,  Gorakhpur 273001'
   },
-  {
-    title: 'Head office',
-    timings: 'Mon-Sat 9am to 5pm.',
-    address: '12th Main Rd, Indiranagar, Bengaluru, Karnataka 560008 IN',
-  },
-  {
-    title: 'Karnataka office',
-    timings: 'Mon-Sat 9am to 5pm.',
-    address: '42, Residency Rd, Shanthala Nagar, Ashok Nagar, Bengaluru, Karnataka 560025 IN',
-  },
+ 
 ]
 
 export function ContactUsPage() {
@@ -138,7 +130,7 @@ export function ContactUsPage() {
             <Image
               alt="Contact us"
               className="hidden max-h-full w-full rounded-lg object-cover lg:block"
-              src="https://images.unsplash.com/photo-1507452786732-f2dc0a2e7b7f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8YW50aXF1ZSUyMGZ1cm5pdHVyZXxlbnwwfHwwfHx8MA%3D%3D"
+              src={contact1}
               height={400} // Add height here
               width={600} // Add width here
             />
