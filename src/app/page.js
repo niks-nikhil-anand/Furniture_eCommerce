@@ -4,6 +4,7 @@ import CategoriesOfFurniture from '@/components/CategoryOfFurniture'
 import ContentSection from '@/components/ContentSection'
 import Grid from '@/components/Grid'
 import Hero from '@/components/Hero'
+import { HomeContact } from '@/components/HomeContact'
 import Project from '@/components/Project'
 import { Section } from '@/components/Section'
 import React from 'react'
@@ -18,7 +19,7 @@ const Home = () => {
     <Project/>
     <Grid/>
     <ContentSection/>
-    
+    <HomeContact/>
     </>
   )
 }

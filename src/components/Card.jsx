@@ -48,7 +48,7 @@ export function Card() {
         {products && products.map((product) => (
           <Link href={'/furniture/'+ product.slug } key={product.id}>
             <motion.div
-              className="w-[300px] rounded-md border bg-[#FFEBC4] cursor-pointer"
+              className="w-[300px] rounded-md border bg-gradient-to-r from-purple-500 to-pink-500cursor-pointer"
               whileHover={{ scale: 1.1 }}
             >
               <Image

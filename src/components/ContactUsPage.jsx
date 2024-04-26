@@ -175,18 +175,7 @@ export function ContactUsPage() {
         </div>
       </div>
       {/* Address */}
-      <div className="rounded-lg border-t-[1px] px-[4rem]">
-        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-          <div className="py-20">
-            <div className="grid grid-cols-1 gap-x-20 gap-y-8 lg:grid-cols-2">
-              <div className="space-y-4">
-                <p className="w-full text-4xl font-bold text-gray-900">Our Offices</p>
-                <p className="w-full text-lg text-gray-600">Find us at these locations.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
       <hr className="mt-6" />
       
     </div>

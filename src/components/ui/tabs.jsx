@@ -27,7 +27,7 @@ const Tabs = ({
     <>
       <div
         className={cn(
-          "flex flex-row items-center justify-start perspective:1000px relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full mt-5 shadow-lg shadow-[#563232] bg-[#41C9E2] p-5 ",
+          "flex flex-row items-center justify-start perspective:1000px relative overflow-auto sm:overflow-visible no-visible-scrollbar max-w-full w-full mt-5 shadow-lg shadow-[#563232] bg-gradient-to-r from-purple-500 to-pink-500 p-5 ",
           containerClassName
         )}
       >
@@ -49,13 +49,13 @@ const Tabs = ({
                 layoutId="clickedbutton"
                 transition={{ type: "spring", bounce: 0.3, duration: 0.6 }}
                 className={cn(
-                  "absolute inset-0 bg-zinc-800 dark:bg-zinc-800 rounded-full ",
+                  "absolute inset-0 bg-white rounded-full ",
                   activeTabClassName
                 )}
               />
             )}
 
-            <span className="relative block  dark:text-white font-bold text-white">
+            <span className="relative block text-black font-bold ">
               {tab.title}
             </span>
           </button>

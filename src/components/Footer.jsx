@@ -1,44 +1,68 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import circle from '../../public/circle.png'
+import foot from '../../public/foot.png'
+
 
 export function Footer() {
   return (
-    <section className="relative overflow-hidden py-10 bg-[#41C9E2] shadow-xl">
+    <section className="relative overflow-hidden pt-10  shadow-xl
+    bg-[#698269]"
+    >
       <div className="relative z-10 mx-auto max-w-7xl px-4">
         <div className="-m-6 flex flex-wrap md:justify-around">
-        <div className="w-full p-6 md:w-1/2 lg:w-2/12">
+        <div className="w-full p-6 md:w-1/2 lg:w-2/15">
             <div className="h-full">
-              <h3 className="tracking-px mb-9  text-2xl font-semibold uppercase text-gray-500">
+              <h3 className="tracking-px mb-9  text-4xl font-semibold uppercase text-black-500">
                 Quick Links
               </h3>
-              <ul>
-                <li className="mb-4">
-                  <Link className=" text-base font-medium text-gray-900 hover:text-gray-700"href={'/about'}>
+              <ul className='text-2xl'>
+                <li className="mb-4 ">
+                  <Link className=" text-base font-medium text-black-900 hover:text-black-700"href={'/about'}>
                     About Us
                     </Link>
                 </li>
                 <li className="mb-4">
-                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="/contact">
+                  <a className=" text-base font-medium text-black-900 hover:text-black-700" href="/contact">
                     Contact Us
                   </a>
                 </li>
                 <li className="mb-4">
-                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="/privacyPolicy">
+                  <a className=" text-base font-medium text-black-900 hover:text-black-700" href="/privacyPolicy">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a className=" text-base font-medium text-gray-900 hover:text-gray-700" href="/termsAndCondition">
+                  <a className=" text-base font-medium text-black-900 hover:text-black-700" href="/termsAndCondition">
                     Terms and Condition
                   </a>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="w-full p-6 md:w-1/2 lg:w-5/12">
+          
             <div className="flex h-full flex-col justify-between">
               <div className="mb-4 inline-flex items-center">
-                <svg
+           
+              
+              <div>
+                
+              </div>
+            </div>
+          </div>
+          
+          <div className="w-full p-6 md:w-1/2 lg:w-5/12 ">
+            <Image src={circle} 
+            height={300}
+            width={300}
+            />
+          </div>
+          
+        </div>
+        <div className=' flex w-full justify-between lg:flex-row flex-col'>
+          <div className='flex items-center '>
+          <svg
                   width="40"
                   height="46"
                   viewBox="0 0 50 56"
@@ -51,19 +75,18 @@ export function Footer() {
                   />
                 </svg>
                 <span className="ml-4 text-lg font-bold">The Royal Oak</span>
-              </div>
-              <div>
-                <p className="mb-4  text-base font-medium">Find your perfect piece of Nostalgia</p>
-                <p className="text-sm text-gray-600">
+          </div>
+                <div className='flex align-center mt-2'>
+                <p className="text-sm text-black-600">
                   &copy; Copyright 2024. All Rights Reserved - 2Solution.
                 </p>
-              </div>
-            </div>
-          </div>
-          
-         
-          
-        </div>
+                </div>
+                <div className='absolute lg:top-0 lg:right-7 top-[4rem] right-2'>
+                  <Image src={foot} height={200}/>
+                </div>
+               
+                </div>
+                
       </div>
     </section>
   )

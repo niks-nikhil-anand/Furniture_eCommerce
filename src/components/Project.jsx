@@ -11,8 +11,8 @@ function Project() {
       title: "Indian",
       value: "Indian",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-5 text-[1rem] md:text-4xl font-bold text-white bg-[#563232] ">
-          
+        <div className="w-full overflow-hidden relative h-full rounded-2xl  text-[1rem] pl-[2rem] md:text-4xl font-bold text-white bg-[#563232]  ">
+          <p>Antique Indian furniture </p>
           <DummyContent1 />
         </div>
       ),
@@ -21,7 +21,7 @@ function Project() {
       title: "Edwardian",
       value: "edwardian",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-[1rem] md:text-4xl font-bold text-white bg-[#563232]">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl  text-[1rem] pl-[2rem] md:text-4xl font-bold text-white bg-[#563232]  ">
           <p>Antique Edwardian furniture</p>
           <DummyContent2 />
         </div>
@@ -31,7 +31,7 @@ function Project() {
       title: "Victorian",
       value: "victorian",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-[1rem] md:text-4xl font-bold text-white bg-[#563232]">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl  text-[1rem] pl-[2rem] md:text-4xl font-bold text-white bg-[#563232]  ">
           <p>Antique Victorian furniture</p>
           <DummyContent3 />
         </div>
@@ -41,7 +41,7 @@ function Project() {
       title: "French",
       value: "french",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-[1rem] md:text-4xl font-bold text-white bg-[#563232]">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl  text-[1rem] pl-[2rem] md:text-4xl font-bold text-white bg-[#563232]  ">
           <p>Antique French furniture</p>
           <DummyContent4 />
         </div>
@@ -51,7 +51,7 @@ function Project() {
       title: "Random",
       value: "random",
       content: (
-        <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-[1rem] md:text-4xl font-bold text-white bg-[#563232]">
+        <div className="w-full overflow-hidden relative h-full rounded-2xl  text-[1rem] pl-[2rem] md:text-4xl font-bold text-white bg-[#563232]  ">
           <p>Random tab</p>
           <DummyContent5 />
         </div>

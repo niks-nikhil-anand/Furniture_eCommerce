@@ -1,13 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* body {
-  background-color: #A8CD9F;
-} */
-body {
-  background-image: conic-gradient(var(--conic-position), var(--tw-gradient-stops));
-}
+
 
 .transition-opacity {
     transition-property: opacity;

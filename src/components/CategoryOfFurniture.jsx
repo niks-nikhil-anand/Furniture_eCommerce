@@ -14,9 +14,9 @@ const Category = ({ name, image }) => (
 
 const CategoryList = () => (
   <div className="flex items-center  lg:gap-[1.2rem] overflow-x-scroll hide-scrollbar">
-    <div className="flex flex-nowrap space-x-4 px-4 md:px-0 lg:px-4">
+    <div className="flex  space-x-4 px-4 md:px-0 lg:px-4">
       {categories.map((category) => (
-        <Link href={'/furniture'}>
+        <Link href={'/categories'}>
         <Category key={category.id} name={category.name} image={category.image} />
         </Link>
       ))}
@@ -25,7 +25,7 @@ const CategoryList = () => (
 );
 
 const CategoriesOfFurniture = () => (
-  <div className="container mx-auto pl-7 mt-[4rem] lg:ml-[4rem]">
+  <div className="container  pl-7 mt-[4rem] lg:ml-[4rem] lg:w-[90rem]">
     <h2 className="text-xl lg:text-3xl font-bold mt-8 mb-4">Categories of Furniture</h2>
     <div className="border-t shadow-md rounded-lg border-[#82714F] py-1 overflow-x-auto">
       <CategoryList />
