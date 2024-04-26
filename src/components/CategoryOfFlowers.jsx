@@ -16,9 +16,10 @@ const CategoryList2 = () => (
   <div className="flex items-center py-4 lg:gap-[1.5rem] overflow-x-scroll hide-scrollbar">
     <div className="flex flex-nowrap space-x-4 px-4 md:px-0 lg:px-4">
       {categories2.map((category) => (
-        <Link href={'/freshFlower'}>
-           key={category.id}
-        <Category2 key={category.id} name={category.name} image={category.image} />
+        
+        <Link href={'/freshFlower'} key={category.id}>
+          
+        <Category2  name={category.name} image={category.image} />
         </Link>
       ))}
     </div>

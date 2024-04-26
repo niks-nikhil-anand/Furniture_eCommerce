@@ -37,7 +37,7 @@ export default function Grid() {
           A celebration of vintage opulence
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-          Welcome to our world of exquisite antique furniture, where every piece tells a story and enriches your space with timeless beauty. Whether you're drawn to the elegance of Indian, Edwardian, Victorian, French, or prefer something Random that captures your heart, we're here to bring these treasures into your life.
+          Welcome to our world of exquisite antique furniture, where every piece tells a story and enriches your space with timeless beauty. Whether you are drawn to the elegance of Indian, Edwardian, Victorian, French, or prefer something Random that captures your heart, we are here to bring these treasures into your life.
           </p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">

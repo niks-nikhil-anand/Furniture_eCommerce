@@ -67,7 +67,7 @@ export default function ContentSection() {
                 <li className="flex gap-x-3">
                   <LockClosedIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                   <span>
-                    <strong className="font-semibold text-gray-900">Expert Guidance: </strong> Benefit from our team's knowledgeable advice and expertise in the world of antique furniture.
+                    <strong className="font-semibold text-gray-900">Expert Guidance: </strong> Benefit from our team  knowledgeable advice and expertise in the world of antique furniture.
 
                   </span>
                 </li>
@@ -83,9 +83,9 @@ export default function ContentSection() {
               Our collection showcases a blend of history and craftsmanship, offering you the opportunity to discover exceptional pieces that reflect your individual taste.
             Explore Royal Oak and embark on a journey where every piece of antique furniture tells a unique story, enriching your home with unparalleled beauty and character.
               </p>
-              <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900">Let's Create Treasures Together</h2>
+              <h2 className="mt-16 text-2xl font-bold tracking-tight text-gray-900"> Create Treasures Together</h2>
               <p className="mt-6">
-              : Immerse yourself in the captivating charm of yesteryear with our handpicked selection of antique furniture that exudes elegance and sophistication. Benefit from our team's extensive expertise and passion for antique furniture.
+              : Immerse yourself in the captivating charm of yesteryear with our handpicked selection of antique furniture that exudes elegance and sophistication. Benefit from our team extensive expertise and passion for antique furniture.
               </p>
             </div>
           </div>

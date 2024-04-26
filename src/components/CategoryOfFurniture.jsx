@@ -16,8 +16,8 @@ const CategoryList = () => (
   <div className="flex items-center  lg:gap-[1.2rem] overflow-x-scroll hide-scrollbar">
     <div className="flex  space-x-4 px-4 md:px-0 lg:px-4">
       {categories.map((category) => (
-        <Link href={'/categories'}>
-        <Category key={category.id} name={category.name} image={category.image} />
+        <Link href={'/categories'} key={category.id}>
+        <Category  name={category.name} image={category.image} />
         </Link>
       ))}
     </div>

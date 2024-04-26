@@ -54,6 +54,7 @@ export function Footer() {
           
           <div className="w-full p-6 md:w-1/2 lg:w-5/12 ">
             <Image src={circle} 
+            alt='circle'
             height={300}
             width={300}
             />
@@ -82,7 +83,7 @@ export function Footer() {
                 </p>
                 </div>
                 <div className='absolute lg:top-0 lg:right-7 top-[4rem] right-2'>
-                  <Image src={foot} height={200}/>
+                  <Image src={foot} height={200} alt='foot'/>
                 </div>
                
                 </div>

@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import React from 'react'
 
 
@@ -5,8 +6,9 @@ import React from 'react'
 export function CategoryCard({title , image}) {
   return (
     <div className="relative h-[200px] w-[300px] ">
-      <img
+      <Image
         src={image}
+        height={200}
         alt="AirMax Pro"
         className="z-0 h-full w-full rounded-md object-cover"
       />

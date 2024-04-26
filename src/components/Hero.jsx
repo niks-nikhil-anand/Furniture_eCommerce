@@ -22,7 +22,7 @@ const HeroSection = () => {
 
   return (
     <div className="relative h-[70vh] overflow-hidden">
-      <Image src={hero} width={800} height={600} />
+      <Image src={hero} width={800} height={600}  alt='hero'/>
       <div className="absolute inset-0 flex items-center justify-center md:justify-end">
         {images.map((image, index) => (
           <div
