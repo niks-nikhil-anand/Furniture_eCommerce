@@ -34,7 +34,7 @@ export function Card() {
       }
     }
     fetchData();
-  }, []);
+  }, [products]);
 
   return (
     <div className="container mx-auto px-4 mt-[4rem] mb-[3rem] lg:px-[5rem] lg:mb-[6rem]">

@@ -1,6 +1,7 @@
 import React from 'react';
 import { categories } from '@/constants/category.js';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Category = ({ name, image }) => (
   <div className="w-32 flex flex-col items-center justify-center">
@@ -15,7 +16,9 @@ const CategoryList = () => (
   <div className="flex items-center  lg:gap-[1.2rem] overflow-x-scroll hide-scrollbar">
     <div className="flex flex-nowrap space-x-4 px-4 md:px-0 lg:px-4">
       {categories.map((category) => (
+        <Link href={'/furniture'}>
         <Category key={category.id} name={category.name} image={category.image} />
+        </Link>
       ))}
     </div>
   </div>

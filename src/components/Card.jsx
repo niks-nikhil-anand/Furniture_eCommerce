@@ -28,13 +28,13 @@ export function Card() {
       try {
         const data = await getData(); 
         setProducts(data.result); 
-        console.log(products)
+       
       } catch (error) {
         console.error("Failed to fetch data:", error);
       }
     }
     fetchData();
-  }, []);
+  }, [products]);
 
   return (
     <div className="container mx-auto px-4 mt-[4rem] mb-[1rem] lg:px-[5rem] lg:mb-[6rem]">
