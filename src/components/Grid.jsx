@@ -2,25 +2,25 @@ import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from
 
 const features = [
   {
-    name: 'Authentic Quotes',
+    name: 'Antiques for the modern soul    ',
     description:
       'Receive personalized price quotes for antique furniture inquiries directly from our experts.',
     icon: CloudArrowUpIcon,
   },
   {
-    name: 'Creating Memories',
+    name: 'Where memories come alive    ',
     description:
       'Elevate your space with classic furniture pieces that create lasting memories.',
     icon: LockClosedIcon,
   },
   {
-    name: 'Classical Elegance',
+    name: 'Embrace the grace of bygone era',
     description:
       'Rediscover the grace of bygone eras with our curated collection.',
     icon: ArrowPathIcon,
   },
   {
-    name: 'Timeless Treasures',
+    name: 'Antiques for the modern soul',
     description:
       'Find antique gems that speak to the modern connoisseur in you.',
     icon: FingerPrintIcon,
@@ -29,12 +29,12 @@ const features = [
 
 export default function Grid() {
   return (
-    <div className="bg-white py-24 sm:py-32">
+    <div className="bg-white py-15 sm:py-20">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-4xl lg:text-center">
-          <h2 className="text-base font-semibold leading-7 text-indigo-600">Nostalgia</h2>
+          <h2 className="text-base font-semibold leading-7 text-indigo-600">Elevate Your Space with Class</h2>
           <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-          Discover Timeless Antiques
+          A celebration of vintage opulence
           </p>
           <p className="mt-6 text-lg leading-8 text-gray-600">
           Welcome to our world of exquisite antique furniture, where every piece tells a story and enriches your space with timeless beauty. Whether you're drawn to the elegance of Indian, Edwardian, Victorian, French, or prefer something Random that captures your heart, we're here to bring these treasures into your life.

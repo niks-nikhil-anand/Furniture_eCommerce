@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function ContentSection() {
   return (
-    <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0">
+    <div className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-20 lg:overflow-visible lg:px-0">
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <svg
           className="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
@@ -34,7 +34,7 @@ export default function ContentSection() {
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <p className="text-base font-semibold leading-7 text-indigo-600">Timeless treasures</p>
+              <p className="text-base font-semibold leading-7 text-indigo-600">Timeless treasures for the modern connoisseur</p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Welcome to The Royal Oak</h1>
               <p className="mt-6 text-xl leading-8 text-gray-700">
               Discover a world of timeless elegance at Royal Oak, where antique furniture becomes the centerpiece of your space. Explore our curated collection of Indian, Edwardian, Victorian, French, and other captivating styles that evoke the charm of bygone eras.
@@ -61,7 +61,7 @@ export default function ContentSection() {
                 <li className="flex gap-x-3">
                   <CloudArrowUpIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                   <span>
-                    <strong className="font-semibold text-gray-900">Embrace the Charm</strong> Immerse yourself in the captivating charm of yesteryear with our handpicked selection.
+                    <strong className="font-semibold text-gray-900">Embrace the Charm:</strong> Immerse yourself in the captivating charm of yesteryear with our handpicked selection.
                   </span>
                 </li>
                 <li className="flex gap-x-3">
@@ -74,7 +74,7 @@ export default function ContentSection() {
                 <li className="flex gap-x-3">
                   <ServerIcon className="mt-1 h-5 w-5 flex-none text-indigo-600" aria-hidden="true" />
                   <span>
-                    <strong className="font-semibold text-gray-900">Quality Assured:Quality Assured:</strong> Rest assured that every item is sourced and verified for authenticity and quality.
+                    <strong className="font-semibold text-gray-900">Quality Assured:</strong> Rest assured that every item is sourced and verified for authenticity and quality.
 
                   </span>
                 </li>

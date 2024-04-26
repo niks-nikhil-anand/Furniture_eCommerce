@@ -15,9 +15,7 @@ const Home = () => {
     <Hero/>
     <Section/>
     <CategoriesOfFurniture/>
-    <CategoriesOfFlowers/>
     <Project/>
-    
     <Grid/>
     <ContentSection/>
     
