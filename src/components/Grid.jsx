@@ -1,186 +1,61 @@
-import Image from 'next/image';
-import React from 'react';
+import { ArrowPathIcon, CloudArrowUpIcon, FingerPrintIcon, LockClosedIcon } from '@heroicons/react/24/outline'
 
-const Grid = () => {
+const features = [
+  {
+    name: 'Authentic Quotes',
+    description:
+      'Receive personalized price quotes for antique furniture inquiries directly from our experts.',
+    icon: CloudArrowUpIcon,
+  },
+  {
+    name: 'Creating Memories',
+    description:
+      'Elevate your space with classic furniture pieces that create lasting memories.',
+    icon: LockClosedIcon,
+  },
+  {
+    name: 'Classical Elegance',
+    description:
+      'Rediscover the grace of bygone eras with our curated collection.',
+    icon: ArrowPathIcon,
+  },
+  {
+    name: 'Timeless Treasures',
+    description:
+      'Find antique gems that speak to the modern connoisseur in you.',
+    icon: FingerPrintIcon,
+  },
+]
+
+export default function Grid() {
   return (
-    <>
-      {/* section_1 */}
-      <div className="max-w-screen-2xl mx-auto px-4 py-16 lg:py-24 relative bg-gray-50">
-       
-<div className='mb-5'>
-<h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl text-center"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 ">Antiques for 
-</span> the modern soul</h1>
-
-</div>
-
-        <div className="flex flex-col md:flex-row gap-2">
-          <div className="flex flex-1 flex-col gap-2">
-            <div className="flex flex-1 flex-col">
-              {/* img_01 */}
-              <Image
-                src="https://www.royalzig.com/uploads/2023/08/img20230618192103.jpg"
-                alt=""
-                className="object-cover rounded-[4rem]"
-                layout="responsive"
-                width={1920}
-                height={1080}
-              />
-            </div>
-            <div className="hidden md:flex flex-1 flex-row gap-2">
-              <div className="flex flex-1 flex-col">
-                {/* img_02 */}
-                <Image
-                  src="https://www.royalzig.com/uploads/cache/cache-Royal-Bedroom-Set-13.jpg"
-                  alt=""
-                  className="object-cover h-full rounded-[4rem]"
-                  layout="responsive"
-                  width={1920}
-                  height={1080}
-                />
-              </div>
-              <div className="hidden md:flex flex-1 flex-col">
-                {/* img_03 */}
-                <Image
-                  src="https://www.royalzig.com/uploads/2019/12/2.jpg"
-                  alt=""
-                  className="object-cover h-full rounded-[4rem]"
-                  layout="responsive"
-                  width={1920}
-                  height={1080}
-                />
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-1 flex-col gap-2">
-            <div className="hidden md:flex flex-1 flex-row gap-2">
-              <div className="flex flex-1 flex-col">
-                {/* img_04 */}
-                <Image
-                  src="https://www.royalzig.com/uploads/cache/cache-classic-italian-style-hand-carved-luxury-sofa-online-in-india-l-(1).jpg"
-                  alt=""
-                  className="object-cover h-full rounded-[4rem]"
-                  layout="responsive"
-                  width={1920}
-                  height={1080}
-                />
-              </div>
-              <div className="hidden md:flex flex-1 flex-col">
-                {/* img_05 */}
-                <Image
-                  src="https://www.royalzig.com/uploads/cache/cache-pune-hand-carved-italian-royal-sofa-set.jpg"
-                  alt=""
-                  className="object-cover h-full rounded-[4rem]"
-                  layout="responsive"
-                  width={1920}
-                  height={1080}
-                />
-              </div>
-            </div>
-            <div className="flex flex-1 flex-col">
-              {/* img_06 */}
-              <Image
-                src="https://www.royalzig.com/uploads/cache/cache-Royalzig-Antique-Style-Hand-Carved-Rocking-Chair.jpg"
-                alt=""
-                className="object-cover h-full rounded-[4rem]"
-                layout="responsive"
-                width={1920}
-                height={1080}
-              />
-            </div>
-          </div>
+    <div className="bg-white py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:max-w-4xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-indigo-600">Nostalgia</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+          Discover Timeless Antiques
+          </p>
+          <p className="mt-6 text-lg leading-8 text-gray-600">
+          Welcome to our world of exquisite antique furniture, where every piece tells a story and enriches your space with timeless beauty. Whether you're drawn to the elegance of Indian, Edwardian, Victorian, French, or prefer something Random that captures your heart, we're here to bring these treasures into your life.
+          </p>
         </div>
-        
-      </div>
-      <div className="max-w-screen-2xl mx-auto px-4 py-16 lg:py-24 relative bg-gray-50">
-       
-<div className='mb-5'>
-<h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl text-center"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 ">Find your perfect piece
-</span>  of nostalgia</h1>
-
-</div>
-
-        <div className="flex flex-col md:flex-row gap-2">
-          <div className="flex flex-1 flex-col gap-2">
-            <div className="flex flex-1 flex-col">
-              {/* img_01 */}
-              <Image
-                src="https://www.royalzig.com/uploads/2023/11/royal-dining-table-furniutre-set-design-2023-online-in-inida-1.jpg"
-                alt=""
-                className="object-cover rounded-[4rem]"
-                layout="responsive"
-                width={1920}
-                height={1080}
-              />
-            </div>
-            <div className="hidden md:flex flex-1 flex-row gap-2">
-              <div className="flex flex-1 flex-col">
-                {/* img_02 */}
-                <Image
-                  src="https://www.royalzig.com/uploads/2023/11/italian-royal-palace-interior-beautiful-carved-furniture-by-royalzig-1024x683.png"
-                  alt=""
-                  className="object-cover h-full rounded-[4rem]"
-                  layout="responsive"
-                  width={1920}
-                  height={1080}
-                />
+        <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
+          <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
+            {features.map((feature) => (
+              <div key={feature.name} className="relative pl-16">
+                <dt className="text-base font-semibold leading-7 text-gray-900">
+                  <div className="absolute left-0 top-0 flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600">
+                    <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
+                  </div>
+                  {feature.name}
+                </dt>
+                <dd className="mt-2 text-base leading-7 text-gray-600">{feature.description}</dd>
               </div>
-              <div className="hidden md:flex flex-1 flex-col">
-                {/* img_03 */}
-                <Image
-                  src="https://www.royalzig.com/uploads/2023/11/antique-furniture-design--hand-carved-in-india.jpg"
-                  alt=""
-                  className="object-cover h-full rounded-[4rem]"
-                  layout="responsive"
-                  width={1920}
-                  height={1080}
-                />
-              </div>
-            </div>
-          </div>
-          <div className="flex flex-1 flex-col gap-2">
-            <div className="hidden md:flex flex-1 flex-row gap-2">
-              <div className="flex flex-1 flex-col">
-                {/* img_04 */}
-                <Image
-                  src="https://www.royalzig.com/uploads/2023/10/519a4d_065b90a775fb4bdcae993d3cff1a61c1~mv2.jpg"
-                  alt=""
-                  className="object-cover h-full rounded-[4rem]"
-                  layout="responsive"
-                  width={1920}
-                  height={1080}
-                />
-              </div>
-              <div className="hidden md:flex flex-1 flex-col">
-                {/* img_05 */}
-                <Image
-                  src="https://www.royalzig.com/uploads/cache/cache-Indian-Classic-Style-Hand-Carved-Study-Room-Furniture.jpg"
-                  alt=""
-                  className="object-cover h-full rounded-[4rem]"
-                  layout="responsive"
-                  width={1920}
-                  height={1080}
-                />
-              </div>
-            </div>
-            <div className="flex flex-1 flex-col">
-              {/* img_06 */}
-              <Image
-                src="https://www.royalzig.com/uploads/cache/cache-Delhi-Classic-Style-Teak-Wood-Office-Desk-and-Chair-1.jpg"
-                alt=""
-                className="object-cover h-full rounded-[4rem]"
-                layout="responsive"
-                width={1920}
-                height={1080}
-              />
-            </div>
-          </div>
+            ))}
+          </dl>
         </div>
-        
       </div>
-
-     
-    </>
-  );
-};
-
-export default Grid;
+    </div>
+  )
+}

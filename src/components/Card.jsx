@@ -37,7 +37,7 @@ export function Card() {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 mt-[4rem] mb-[3rem] lg:px-[5rem] lg:mb-[6rem]">
+    <div className="container mx-auto px-4 mt-[4rem] mb-[1rem] lg:px-[5rem] lg:mb-[6rem]">
       <div className='mb-7 mt-5'>
 <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl text-center"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 ">Our Latest 
 </span> Product</h1>

@@ -1,6 +1,7 @@
 import { Card } from '@/components/Card'
 import CategoriesOfFlowers from '@/components/CategoryOfFlowers'
 import CategoriesOfFurniture from '@/components/CategoryOfFurniture'
+import ContentSection from '@/components/ContentSection'
 import Grid from '@/components/Grid'
 import Hero from '@/components/Hero'
 import Project from '@/components/Project'
@@ -16,8 +17,9 @@ const Home = () => {
     <CategoriesOfFurniture/>
     <CategoriesOfFlowers/>
     <Project/>
-    <Card/>
+    
     <Grid/>
+    <ContentSection/>
     
     </>
   )

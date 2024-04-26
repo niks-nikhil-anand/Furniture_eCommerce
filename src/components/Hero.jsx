@@ -27,7 +27,7 @@ const HeroSection = () => {
         <h1 className="text-2xl md:text-4xl font-bold ">Custom Handmade Furniture</h1>
         <p className="text-lg md:text-xl mt-4">Every Antique has its class and History</p>
         <Link href={'/contact'} >
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-6">Contact Us Now</button>
+        <button className="bg-[#41C9E2] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-6">Contact Us Now</button>
         </Link>
        
       </div>
