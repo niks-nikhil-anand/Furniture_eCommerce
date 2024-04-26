@@ -3,7 +3,7 @@ import React, { useContext, useState, useEffect } from 'react';
 
 
 async function getData() {
-  const apiEndpoint = `${process.env.domain}api/inquiryList`;
+  const apiEndpoint = `${process.env.domain}api/contactAdmin`;
 
   const res = await fetch(`${apiEndpoint}`, {
    method : 'GET',
@@ -19,7 +19,7 @@ async function getData() {
   return res.json();
 }
 
-const AllProducts = () => {
+const ContactList = () => {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     async function fetchData() {
@@ -48,20 +48,22 @@ const AllProducts = () => {
       <table className="min-w-full divide-y divide-gray-200">
         <thead className="bg-gray-50">
           <tr>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">First Name</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Last Name</th>
             <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Phone</th>
-            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Comments</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Phone Number</th>
+            <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Message</th>
            
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200">
           {products && products.map((product) => (
             <tr key={product._id}>
-              <td className="px-6 py-4 whitespace-nowrap">{product.name}</td>
+              <td className="px-6 py-4 whitespace-nowrap">{product.firstName}</td>
+              <td className="px-6 py-4 whitespace-nowrap">{product.lastName}</td>
               <td className="px-6 py-4 whitespace-nowrap">{product.email}</td>
-              <td className="px-6 py-4 whitespace-nowrap">{product.phone}</td>
-              <td className="px-6 py-4 whitespace-nowrap">{product.comments}</td>
+              <td className="px-6 py-4 whitespace-nowrap">{product.phoneNumber}</td>
+              <td className="px-6 py-4 whitespace-nowrap">{product.message}</td>
              
             </tr>
           ))}
@@ -73,4 +75,4 @@ const AllProducts = () => {
 
 
 
-export default AllProducts;
+export default ContactList;

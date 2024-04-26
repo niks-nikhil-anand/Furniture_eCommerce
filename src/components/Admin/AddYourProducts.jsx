@@ -59,7 +59,10 @@ export default function ProductForm() {
 
   return (
     <Container>
-      <h1 className='text-2xl align-center'>Add Products - The Royal Oak</h1>
+      <div className='flex justify-center mb-5'>
+      <h1 className='font-bold from-purple-600 via-pink-600 to-blue-600 bg-gradient-to-r bg-clip-text text-transparent text-3xl '>Add Products - The Royal Oak</h1>
+      </div>
+     
       <form onSubmit={handleSubmit}>
         <Grid container spacing={2}>
           <Grid item xs={12} sm={6}>

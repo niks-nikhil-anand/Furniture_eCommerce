@@ -23,8 +23,8 @@ const HeroSection = () => {
   return (
     <div className="relative h-[70vh] overflow-hidden">
       <div className="absolute inset-0 bg-gray-900 opacity-75"></div>
-      <div className="z-10 text-white text-center absolute top-1/2 left-1/2 md:left-1/4 transform -translate-x-1/2 -translate-y-1/2">
-        <h1 className="text-2xl md:text-4xl font-bold">Custom Handmade Furniture</h1>
+      <div className="z-10 text-white text-center absolute top-1/2 left-1/2 md:left-1/4 transform -translate-x-1/2 -translate-y-1/2 sm:[4rem]">
+        <h1 className="text-2xl md:text-4xl font-bold ">Custom Handmade Furniture</h1>
         <p className="text-lg md:text-xl mt-4">Every Antique has its class and History</p>
         <Link href={'/contact'} >
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mt-6">Contact Us Now</button>

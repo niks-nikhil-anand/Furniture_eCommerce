@@ -1,4 +1,6 @@
 "use client"
+import { useSession } from 'next-auth/react';
+import { useRouter } from 'next/navigation';
 import * as React from 'react';
 import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
@@ -20,10 +22,11 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 import Dashboard from '@/components/Dashboard';
-import AddProducts from '@/components/AddProducts';
-import AllProducts from '@/components/Admin/AllProducts';
 import AddYourProducts from '@/components/Admin/AddYourProducts';
+import AllProducts from '@/components/Admin/AllProducts';
 import InquiryTable from '@/components/Admin/InquiryList';
+import ContactList from '@/components/Admin/ContactList';
+
 const drawerWidth = 240;
 
 const Main = styled('main', { shouldForwardProp: (prop) => prop !== 'open' })(
@@ -72,6 +75,8 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }));
 
 export default function PersistentDrawerRight() {
+  const { data: session, status } = useSession(); // Access the session state
+  const router = useRouter();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const [selectedComponent, setSelectedComponent] = React.useState(null);
@@ -85,14 +90,12 @@ export default function PersistentDrawerRight() {
   };
 
   const handleSidebarItemClick = (text) => {
-    // Handle click event for sidebar items
-    console.log(`Clicked on: ${text}`);
-    // Set the selected component based on the clicked item
+   
     switch (text) {
       case 'Dashboard':
         setSelectedComponent(<Dashboard />);
         break;
-        case 'Add-Products':
+      case 'Add-Products':
         setSelectedComponent(<AddYourProducts />);
         break;
       case 'All-Products':
@@ -101,16 +104,23 @@ export default function PersistentDrawerRight() {
       case 'Inquiry-List':
         setSelectedComponent(<InquiryTable />);
         break;
-    
-      // Add more cases for other sidebar items as needed
+      case 'Contact-Form':
+        setSelectedComponent(<ContactList />);
+        break;
       default:
-        setSelectedComponent(null);
+        setSelectedComponent(<Dashboard />);
         break;
     }
   };
 
- 
-  
+  if (status === 'loading') return <div>Login first</div>;
+
+  if (!session) {
+    // Redirect to the sign-in page if the user is not authenticated
+    router.push('/admin');
+    return null;
+  }
+
 
   return (
     <Box sx={{ display: 'flex' }}>
@@ -168,7 +178,7 @@ export default function PersistentDrawerRight() {
         </List>
         <Divider />
         <List>
-          {['Inquiry-List', 'Contact-Form', 'About-Us'].map((text, index) => (
+          {['Inquiry-List', 'Contact-Form'].map((text, index) => (
             <ListItem key={text} disablePadding>
               <ListItemButton onClick={() => handleSidebarItemClick(text)}>
                 <ListItemIcon>

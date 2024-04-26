@@ -2,7 +2,7 @@
 import React, { useState, useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const InquiryForm = () => {
   const notify = () => { // corrected syntax here

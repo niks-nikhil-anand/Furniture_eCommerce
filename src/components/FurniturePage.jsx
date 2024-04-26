@@ -44,6 +44,7 @@ export function Card() {
             <motion.div
               className="w-[300px] rounded-md border bg-[#FFEBC4] cursor-pointer"
               whileHover={{ scale: 1.1 }}
+              key={product.id} 
             >
               <Image
                 src={product.imageUrl}

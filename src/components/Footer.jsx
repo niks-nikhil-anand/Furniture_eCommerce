@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <section className="relative overflow-hidden py-10 bg-[#58A399] shadow-xl">
       <div className="relative z-10 mx-auto max-w-7xl px-4">
-        <div className="-m-6 flex flex-wrap">
+        <div className="-m-6 flex flex-wrap md:justify-around">
         <div className="w-full p-6 md:w-1/2 lg:w-2/12">
             <div className="h-full">
               <h3 className="tracking-px mb-9  text-2xl font-semibold uppercase text-gray-500">

@@ -4,7 +4,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   env: {
-    domain: 'https://theroyal.vercel.app/',
+    domain: 'http://localhost:3000/',
     NEXTAUTH_URL:'http://localhost:3000/api/auth' ,
     NEXTAUTH_SECRET: 'vjvjvjvbkbkkjggug',
   },
