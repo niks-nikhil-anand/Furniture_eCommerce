@@ -12,7 +12,7 @@ function Project() {
       value: "Indian",
       content: (
         <div className="w-full overflow-hidden relative h-full rounded-2xl p-5 text-[1rem] md:text-4xl font-bold text-white bg-[#563232] ">
-          <p>Antique Indian furniture </p>
+          
           <DummyContent1 />
         </div>
       ),
