@@ -66,15 +66,21 @@ export  const categories2 = [
     "image": "https://www.royalzig.com/uploads/cache/cache-luxury-dining-table-classic-italian-design-%E2%80%93-delhi--(1).jpg"
   },
   {
-    "id": 7,
+    "id": 8,
     "name": "Office",
     "image":"https://www.royalzig.com/uploads/cache/cache-Delhi-Classic-Style-Teak-Wood-Office-Desk-and-Chair-1.jpg"
   },
   {
-    "id": 7,
-    "name": "Handcrafted",
-    "image":"https://www.royalzig.com/uploads/cache/cache-Royal-Dining-Table-6-Person-Carved-Design-Royalzig-Luxury-Furniture.jpg"
+    "id": 9,
+    "name": "Antique Door",
+    "image":"https://antiquehomedecors.com/wp-content/uploads/2024/01/2.png"
   },
+  {
+    "id": 10,
+    "name": "Windows",
+    "image":"https://www.indune.com/image/cache/catalog/e20AAC/E20/E20012CN-1000x1000.jpg"
+  },
+  
 
 ]
   

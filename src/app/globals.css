@@ -4,7 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body{
+  background-color: #F6F5F2;
+}
 
 .transition-opacity {
     transition-property: opacity;

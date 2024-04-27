@@ -1,6 +1,6 @@
 const nextConfig = {
   images: {
-    domains: ['images.unsplash.com', 'images.wiloke.com', 'plugins.wiloke.com', 'plus.unsplash.com', 'via.placeholder.com' , "www.royalzig.com"],
+    domains: ['images.unsplash.com', 'images.wiloke.com', 'plugins.wiloke.com', 'plus.unsplash.com', 'via.placeholder.com' , "www.royalzig.com" ,"antiquehomedecors.com" ,  "indune.com" ],
   },
   reactStrictMode: true,
   env: {
