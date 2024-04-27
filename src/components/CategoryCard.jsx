@@ -9,6 +9,7 @@ export function CategoryCard({title , image}) {
       <Image
         src={image}
         height={200}
+        width={200}
         alt="AirMax Pro"
         className="z-0 h-full w-full rounded-md object-cover"
       />
