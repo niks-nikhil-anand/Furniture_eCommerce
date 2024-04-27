@@ -38,8 +38,10 @@ export function Card() {
 
   return (
     <div className="container mx-auto px-4 mt-[4rem] mb-[1rem] lg:px-[5rem] lg:mb-[6rem] shadow-lg  "
-    style={{ boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px' }}>
-      <div className='mb-7 mt-5'>
+    >
+      <div className='mb-7 mt-5'
+      
+      >
 <h1 class="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl text-center"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400 ">Our Latest 
 </span> Product</h1>
 
@@ -51,6 +53,7 @@ export function Card() {
             <motion.div
               className="w-[300px] rounded-md border bg-gradient-to-r from-purple-500 to-pink-500cursor-pointer"
               whileHover={{ scale: 1.1 }}
+              style={{ boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px' }}
             >
               <Image
                 src={product.imageUrl}

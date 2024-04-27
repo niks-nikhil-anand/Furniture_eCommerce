@@ -1,4 +1,5 @@
-import cat1 from '../../public/cat1.jpeg'
+import window from '../../public/window.jpg'
+import bedcat from '../../public/bedcat.jpg'
 
 export  const categories = [
     {
@@ -58,7 +59,7 @@ export  const categories2 = [
   {
     "id": 5,
     "name": "Bedroom",
-    "image": "https://www.royalzig.com/uploads/cache/cache-Malvika-Royal-Antique-Style-Bedroom-Set-Collection.jpg"
+    "image": bedcat
   },
   {
     "id": 6,
@@ -78,7 +79,7 @@ export  const categories2 = [
   {
     "id": 10,
     "name": "Windows",
-    "image":"https://www.indune.com/image/cache/catalog/e20AAC/E20/E20012CN-1000x1000.jpg"
+    "image":window
   },
   
 
