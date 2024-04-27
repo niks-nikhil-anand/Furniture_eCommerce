@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap");
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+
 body{
+  font-family: "Avenir LT Std";
   background-color: #F6F5F2;
 }
 
