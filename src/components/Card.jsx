@@ -51,7 +51,7 @@ export function Card() {
         {products && products.map((product) => (
           <Link href={'/furniture/'+ product.slug } key={product.id}>
             <motion.div
-              className="w-[300px] rounded-md border bg-gradient-to-r from-purple-500 to-pink-500cursor-pointer"
+              className="w-[300px] rounded-md   bg-[#698269] cursor-pointer"
               whileHover={{ scale: 1.1 }}
               style={{ boxShadow: 'rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px' }}
             >
