@@ -11,11 +11,7 @@ const SliderFlowers = () => {
         </span>
       </div>
       <HorizontalScrollCarousel />
-      <div className="flex h-48 items-center justify-center">
-        <span className="font-semibold uppercase text-neutral-500">
-          Scroll up
-        </span>
-      </div>
+     
     </div>
   );
 };
@@ -26,7 +22,7 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-75%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
 
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
