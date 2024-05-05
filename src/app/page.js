@@ -1,3 +1,4 @@
+import { TextParallaxContentExample } from '@/components/Annimations'
 import { Card } from '@/components/Card'
 import CategoriesOfFlowers from '@/components/CategoryOfFlowers'
 import CategoriesOfFurniture from '@/components/CategoryOfFurniture'
@@ -18,6 +19,7 @@ const Home = () => {
     <CategoriesOfFurniture/>
     <Project/>
     <Grid/>
+    <TextParallaxContentExample/>
     <ContentSection/>
     <HomeContact/>
     </>

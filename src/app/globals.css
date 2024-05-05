@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
 
 
 @tailwind base;
@@ -8,7 +8,7 @@
 
 
 body{
-  font-family: "Avenir LT Std";
+  font-family: "Ubuntu Sans", sans-serif;
   background-color: #F6F5F2;
 }
 

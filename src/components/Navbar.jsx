@@ -10,14 +10,6 @@ const menuItems = [
     href: '/',
   },
   {
-    name: 'About',
-    href: '/about',
-  },
-  {
-    name: 'Contact',
-    href: '/contact',
-  },
-  {
     name: 'Projects',
     href: '/project',
   },
@@ -28,6 +20,14 @@ const menuItems = [
   {
     name: 'Furniture',
     href: '/furniture',
+  },
+  {
+    name: 'About',
+    href: '/about',
+  },
+  {
+    name: 'Contact',
+    href: '/contact',
   },
 ];
 
